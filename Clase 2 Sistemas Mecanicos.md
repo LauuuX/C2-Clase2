@@ -8,5 +8,23 @@ Figura 1. Representación de sistemas
 ## Principio general de modelamiento 
 Tasa de acumulación × (Masa o Energía) = Flujo de (Masa o Energía) de Entrada - Flujo de (Masa o Energía) de Salida
 
+## Sitemas mecánicos: 
+* Resorte:
+> 🔑 Se asumen resortes lineales, la fuerza externa aplicada y el desplazamiento están relacionados por una constante de proporcionalidad.
+
+$$F = kx = k(x_1 - x_2)$$
+
+Donde:
+- $$\( F \)$$ es la fuerza.
+- $$\( k \)$$ es la constante de elasticidad.
+- $$\( (x_1 - x_2) \)$$ es la distancia comprimida o estirada del resorte.
+  
+![image](https://github.com/user-attachments/assets/ea767fdc-764c-4ba3-914a-dc28875ed51f)
+
+Figura 2. Resorte
+
+![image](https://github.com/user-attachments/assets/a1d73215-4af7-485c-a273-aae052e3a521)
+
+Figura 3. Gráfica de los tipos de resorte 
 
 
