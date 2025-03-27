@@ -1,1 +1,1 @@
-# C2-Clase2
+# Sistemas mecánicos 
