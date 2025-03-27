@@ -6,4 +6,7 @@
 Figura 1. Representación de sistemas 
 
 ## Principio general de modelamiento 
-$$\text{Tasa de acumulación} = \left( \frac{\text{Masa}}{\text{Energía}} \right)_{\text{Entrada}} - \left( \frac{\text{Masa}}{\text{Energía}} \right)_{\text{Salida}}$$
+Tasa de acumulación × (Masa o Energía) = Flujo de (Masa o Energía) de Entrada - Flujo de (Masa o Energía) de Salida
+
+
+
