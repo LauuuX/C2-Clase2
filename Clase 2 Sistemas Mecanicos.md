@@ -44,5 +44,20 @@ Donde:
 - \( \dot{x}_1 \) y \( \dot{x}_2 \) son las velocidades relativas de los puntos en contacto.
 
 
+## Tipos de Fricción
+
+### Fricción en seco
+ > 🔑 Es aquella que se representa cuando un cuerpo con una superficie no lubricada se desliza sobre otra superficie no lubricada.
+
+### Fricción por deslizamiento
+
+
+### Fricción por Rodamiento
+
+## Sistemas mecánicos más complejos
+> 🔑 Son aquellos que tienen más de dos elementos de enlace. Se caracterizan por tener partes interconectadas que generan un comportamiento inesperado.
+
+💡**Ejemplo 1:** 
+
 
 
