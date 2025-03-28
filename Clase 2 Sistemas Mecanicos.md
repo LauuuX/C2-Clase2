@@ -57,7 +57,10 @@ Donde:
 ## Sistemas mecánicos más complejos
 > 🔑 Son aquellos que tienen más de dos elementos de enlace. Se caracterizan por tener partes interconectadas que generan un comportamiento inesperado.
 
-💡**Ejemplo 1:** 
+💡**Ejemplo 1:**\
+![image](Imagenes/a.png)
 
+Diagrama de cuerpo libre de cada masa:
+![image](Imagenes/a.png)
 
 
