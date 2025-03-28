@@ -53,6 +53,13 @@ Donde:
 
 
 ### Fricción por Rodamiento
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Sistemas mecánicos más complejos
 > 🔑 Son aquellos que tienen más de dos elementos de enlace. Se caracterizan por tener partes interconectadas que generan un comportamiento inesperado.
@@ -61,6 +68,43 @@ Donde:
 ![image](Imagenes/a.png)
 
 Diagrama de cuerpo libre de cada masa:
+
+| **D.C.L masa 1** | **D.C.L masa 2** |
+|------------------|------------------|
+|       ![image](Imagenes/b.png)       |                       ![image](Imagenes/c.png)            |
+
+-Ecuacion para la masa 1:
+
+$$ u - F_{R1} - F_{R2} - F_F = m_1 \cdot a_{m1} $$
+
+La distancia de elongación del resorte 2 depende del movimiento de ambas masas
+
+La velocidad del émbolo del amortiguador del resorte 2 depende del movimiento de ambas masas
+
+Reemplazando valores queda:
+
+$$ u(t) - k_1 x_1(t) - k_2 (x_1(t) - x_2(t)) - b \cdot \frac{d(x_1(t) - x_2(t))}{dt} = m_1 \cdot \frac{d^2 x_1(t)}{dt^2} $$
+
+<br>
+------------------------------------------------------------------------
+<br>
+-Ecuacion para la masa 2:
+
+$$ F_{R2} + F_F - F_{R3}= m_2 \cdot a_{m2} $$
+
+La distancia de elongación del resorte 2 depende del movimiento de ambas masas
+
+La velocidad del émbolo del amortiguador del resorte 2 depende del movimiento de ambas masas
+
+Reemplazando valores queda:
+
+$$ k_2 \cdot (x_1(t) - x_2(t)) + b \cdot \frac{d(x_1(t) - x_2(t))}{dt} - k_3 \cdot x_2(t) = m_2 \cdot \frac{d^2 x_2(t)}{dt^2} $$
+
+
+## Modelo resultante:
+
 ![image](Imagenes/a.png)
 
+$$ u(t) - k_1 x_1(t) - k_2 (x_1(t) - x_2(t)) - b \cdot \frac{d(x_1(t) - x_2(t))}{dt} = m_1 \cdot \frac{d^2 x_1(t)}{dt^2} $$
 
+$$ k_2 \cdot (x_1(t) - x_2(t)) + b \cdot \frac{d(x_1(t) - x_2(t))}{dt} - k_3 \cdot x_2(t) = m_2 \cdot \frac{d^2 x_2(t)}{dt^2} $$
