@@ -45,21 +45,66 @@ Donde:
 
 
 ## Tipos de Fricción
+  > 🔑 Es aquella que se presenta cuando un cuerpo con una superficie no lubricada se desliza sobre otra superficie no lubricada.
+  * Fricción estática
+  * Fricción por deslizamiento
+  * Fricción por rodamiento
+    
+    ![image](https://github.com/user-attachments/assets/a9b53518-b6bd-47c9-a552-530991cec203)
 
-### Fricción en seco
+    Figura 5. Tipos de fricción  
+
+### Fricción estática 
  > 🔑 Es aquella que se representa cuando un cuerpo con una superficie no lubricada se desliza sobre otra superficie no lubricada.
 
+  ![image](https://github.com/user-attachments/assets/557ddb5c-b6f5-40dd-9e0b-c21ef582080d)
+
+  Figura 6. Fricción estática  
+
 ### Fricción por deslizamiento
+> 🔑 fricción por deslizamiento como la resistencia que crean dos objetos cualesquiera al deslizarse uno contra el otro . Esta fricción, también conocida como fricción cinética, se define como la fuerza necesaria para mantener una superficie deslizándose sobre otra.
+
+  ![image](https://github.com/user-attachments/assets/46ca6eda-8a20-4fa1-84a3-32e61c581dd2)
+
+  Figura 7. Fricción por deslizamiento   
 
 
 ### Fricción por Rodamiento
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+> 🔑El rozamiento por rodadura es la fricción que se produce cuando dos cuerpos ruedan o se deslizan entre sí. Se presenta cuando uno de los cuerpos se deforma, o ambos. 
+
+  ![image](https://github.com/user-attachments/assets/70cd5274-ef6e-4f76-a7e3-3288b1a27b0d)
+
+  Figura 8. Fricción por rodamiento 
+## Sistema masa - resorte - amortiguador 
+* $$F_R = k_2 \cdot x \quad \text{→ Ley de Hooke}$$
+
+* $$F_F = k_1 \cdot v_m \quad \text{→ Fricción viscosa}$$
+
+* $$F = m \cdot a \quad \text{→ Leyes de Newton}$$
+
+  ![image](https://github.com/user-attachments/assets/6131fb3d-4e1b-4ea5-a614-1917c25dc112)
+
+  Figura 9. Sistema masa - resorte
+  
+### Diagrama de cuerpo libre 
+  ![image](https://github.com/user-attachments/assets/f985c2d4-3c10-4926-8d3c-d25fe07a2646)
+
+  Figura 10. Diagrama de cuerpo libre 
+### Solución 
+
+$$u - F_R - F_F = m \cdot a$$
+
+$$F_R = k_2 \cdot y(t)$$
+
+$$u(t) - k_2 \cdot y(t) - F_F = m \cdot a$$
+
+$$F_F = k_1 \cdot \frac{dy(t)}{dt}$$
+
+$$u(t) - k_2 \cdot y(t) - k_1 \cdot \frac{dy(t)}{dt} = m \cdot a$$
+
+$$a = \frac{d^2y(t)}{dt^2}$$
+
+$$u(t) - k_2 \cdot y(t) - k_1 \cdot \frac{dy(t)}{dt} = m \cdot \frac{d^2y(t)}{dt^2}$$
 
 ## Sistemas mecánicos más complejos
 > 🔑 Son aquellos que tienen más de dos elementos de enlace. Se caracterizan por tener partes interconectadas que generan un comportamiento inesperado.
