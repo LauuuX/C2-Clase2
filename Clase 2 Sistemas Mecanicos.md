@@ -106,6 +106,17 @@ $$a = \frac{d^2y(t)}{dt^2}$$
 
 $$u(t) - k_2 \cdot y(t) - k_1 \cdot \frac{dy(t)}{dt} = m \cdot \frac{d^2y(t)}{dt^2}$$
 
+💡**Ejemplo :**
+* Encontrar el modelo matemático para el sistema que representa a la suspención de un automóvil.
+  
+    ![image](https://github.com/user-attachments/assets/7edc7562-81b3-4cbb-ab0f-297b90f3fd16)
+
+     Figura 10. Sistema masa - resorte - amortiguador
+### Solución 
+#### Diagrama de cuerpo libre: 
+  ![image](https://github.com/user-attachments/assets/5ee39e91-2ccc-42b8-8879-b838fd292e69)
+  
+  Figura 11. Diagrama de cuerpo libre, masa - resorte - amortiguador 
 ## Sistemas mecánicos más complejos
 > 🔑 Son aquellos que tienen más de dos elementos de enlace. Se caracterizan por tener partes interconectadas que generan un comportamiento inesperado.
 
