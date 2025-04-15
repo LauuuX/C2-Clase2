@@ -110,13 +110,65 @@ $$u(t) - k_2 \cdot y(t) - k_1 \cdot \frac{dy(t)}{dt} = m \cdot \frac{d^2y(t)}{dt
 * Encontrar el modelo matemático para el sistema que representa a la suspención de un automóvil.
   
     ![image](https://github.com/user-attachments/assets/7edc7562-81b3-4cbb-ab0f-297b90f3fd16)
-
+  
      Figura 10. Sistema masa - resorte - amortiguador
+  
 ### Solución 
+
+![image](https://github.com/user-attachments/assets/5cf17dd6-0505-42b7-9931-b9973ba1be34)
+
+Figura 11. Comportamiento de un resorte 
+
+ No se tiene en cuenta el efecto de la fuerza de gravedad si se considera el desplazamiento desde la posición de equilibrio, puesto que en ese caso:
+$$k \cdot \delta = m \cdot g$$
+
+Y si se considera la sustitución:
+
+$$y = x + \delta$$
+
+El término correspondiente a la fuerza de gravedad desaparece.
+
 #### Diagrama de cuerpo libre: 
   ![image](https://github.com/user-attachments/assets/5ee39e91-2ccc-42b8-8879-b838fd292e69)
   
-  Figura 11. Diagrama de cuerpo libre, masa - resorte - amortiguador 
+  Figura 12. Diagrama de cuerpo libre masa - resorte - amortiguador
+ 
+### Solución de la ecuación diferencial 
+
+* $$sum F = m \cdot a$$
+  
+* Las fuerzas que actúan sobre la masa \( m \) son:
+
+- $$F_R = k_2 \cdot y(t)$$: fuerza del resorte (hacia arriba)
+- $$F_F = k_1 \cdot \frac{dy(t)}{dt}$$: fricción viscosa (hacia arriba)
+- $$F_W = m \cdot g$$: peso (hacia abajo)
+- $$u(t)$$: fuerza externa (hacia abajo)
+
+$$u(t) - F_R - F_F = m \cdot \frac{d^2y(t)}{dt^2}$$
+
+$$u(t) - k_2 \cdot y(t) - k_1 \cdot \frac{dy(t)}{dt} = m \cdot \frac{d^2y(t)}{dt^2}$$
+
+$$m \cdot \frac{d^2y(t)}{dt^2} + k_1 \cdot \frac{dy(t)}{dt} + k_2 \cdot y(t) = u(t)$$
+
+## Vibración libre
+
+- Aún aplicando entrada durante un intervalo de tiempo definido es posible provocar un comportamiento oscilatorio en la variable de salida del sistema.
+- Por ejemplo, en el caso de la suspensión, si se aplica una fuerza constante durante un intervalo corto de tiempo y luego se retira dicho estímulo, el sistema tiende a vibrar.
+- Este movimiento periódico se conoce como **vibración libre**
+
+💡 Ejemplo: 
+
+ ### Respuesta del sistema bajo vibración libre
+
+- $$k = 22500\ \frac{N}{m}$$
+- $$b = 2000\ \frac{Ns}{m}$$
+- $$m = 460\ kg$$ masa del vehículo + 2 personas de 80 kg
+
+ ### Ecuación del sistema
+
+$$m \cdot \frac{d^2y}{dt^2} + b \cdot \frac{dy}{dt} + k \cdot y = 0$$
+$$460 \cdot \ddot{y}(t) + 2000 \cdot \dot{y}(t) + 22500 \cdot y(t) = 0$$
+
 ## Sistemas mecánicos más complejos
 > 🔑 Son aquellos que tienen más de dos elementos de enlace. Se caracterizan por tener partes interconectadas que generan un comportamiento inesperado.
 
