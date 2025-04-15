@@ -38,10 +38,10 @@ Figura 4. Amortiguador
 $$F = b\dot{x} = b(\dot{x}_1 - \dot{x}_2)$$
 
 Donde:
-- \( F \) es la fuerza de fricción viscosa.
-- \( b \) es la constante de fricción viscosa.
-- \( \dot{x} \) es la velocidad.
-- \( \dot{x}_1 \) y \( \dot{x}_2 \) son las velocidades relativas de los puntos en contacto.
+- $$F$$ es la fuerza de fricción viscosa.
+- $$b$$ es la constante de fricción viscosa.
+- $$\dot{x}$$ es la velocidad.
+- $$\dot{x}_1$$ y $$\dot{x}_2$$ son las velocidades relativas de los puntos en contacto.
 
 
 ## Tipos de Fricción
@@ -213,6 +213,47 @@ $$ k_2 \cdot (x_1(t) - x_2(t)) + b \cdot \frac{d(x_1(t) - x_2(t))}{dt} - k_3 \cd
 
 ![image](Imagenes/a.png)
 
-$$ u(t) - k_1 x_1(t) - k_2 (x_1(t) - x_2(t)) - b \cdot \frac{d(x_1(t) - x_2(t))}{dt} = m_1 \cdot \frac{d^2 x_1(t)}{dt^2} $$
+$$u(t) - k_1 x_1(t) - k_2 (x_1(t) - x_2(t)) - b \cdot \frac{d(x_1(t) - x_2(t))}{dt} = m_1 \cdot \frac{d^2 x_1(t)}{dt^2}$$
 
-$$ k_2 \cdot (x_1(t) - x_2(t)) + b \cdot \frac{d(x_1(t) - x_2(t))}{dt} - k_3 \cdot x_2(t) = m_2 \cdot \frac{d^2 x_2(t)}{dt^2} $$
+$$k_2 \cdot (x_1(t) - x_2(t)) + b \cdot \frac{d(x_1(t) - x_2(t))}{dt} - k_3 \cdot x_2(t) = m_2 \cdot \frac{d^2 x_2(t)}{dt^2}$$
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+💡**Ejemplo 1:**
+
+![image](https://github.com/user-attachments/assets/da866a79-91ce-4fa7-ac0d-ce9416c9ba9a)
+
+Una masa $$m$$ unida a:
+  - Un resorte con constante $$k$$
+  - Dos amortiguadores: $$b_1$$ (con el suelo) y $$b_2$$ (en serie con el resorte)
+- Entrada: fuerza externa $$u(t)$$
+- Variables de posición:  
+  - $$x_1(t)$$: posición de la masa  
+  - $$x_2(t)$$: posición del punto entre el resorte y el amortiguador $$b_2$$
+
+---
+
+### 📊 Elementos del sistema
+
+- Fuerza del resorte:  
+
+$$F_k = k (x_2 - x_1)$$
+
+- Fuerza del amortiguador $$b_2$$:  
+
+$$F_{b_2} = b_2 (\dot{x}_2 - \dot{x}_1)$$
+
+- Fuerza del amortiguador $$b_1$$:  
+
+$$F_{b_1} = b_1 \cdot \dot{x}_1$$
+
+### Aplicando la Segunda Ley de Newton a la masa
+
+$$u(t) - k(x_1 - x_2) - b_2(\dot{x}_1 - \dot{x}_2) - b_1 \cdot \dot{x}_1 = m \cdot \ddot{x}_1$$
+
+
+### Ecuación diferencial final
+
+$$m \cdot \ddot{x}_1 + (b_1 + b_2) \cdot \dot{x}_1 + k \cdot x_1 = b_2 \cdot \dot{x}_2 + k \cdot x_2 + u(t)$$
+
+
