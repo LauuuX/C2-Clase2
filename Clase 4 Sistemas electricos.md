@@ -74,6 +74,35 @@ $$ -u(t)+\left(R_1+R_2\right) c \frac{d y}{d t}\left(\frac{R_2}{R_2}+1\right)-\f
 
 
 
+### 💡*Ejemplo 3:*
+Aplicando nodos:<br>
+![image](Imagenes/k.png) 
+
+Aplicando ley de Kirchhoff de corrientes (LKC)
+
+$$ i_u - i_1 - i_c = 0 $$
+
+$$ i_u(t) - \frac{V_{AB}}{0.5} - 2 \frac{dy(t)}{dt} = 0 $$
+
+
+### Sustituyendo \( V_{AB} \)
+
+$$ V_{AB} = i_c \cdot 1 + y(t) $$
+
+$$ V_{AB} = 2 \frac{dy(t)}{dt} + y(t) $$
+
+$$ u(t)-\frac{2}{0,5} \frac{d y(t)}{d t}-\frac{1}{0,5} y(t)-2 \frac{d y(t)}{d t}=0 $$
+
+### Ecuación final del sistema:
+
+$$ \boxed{u(t) - 6 \frac{dy(t)}{dt} - 2y(t) = 0} $$
+
+
+### 💡*Ejemplo 4:*
+
+![image](Imagenes/l.png) 
+
+
 
 
 
