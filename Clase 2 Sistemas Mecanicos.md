@@ -231,6 +231,9 @@ Una masa $$m$$ unida a:
   - $$x_1(t)$$: posición de la masa  
   - $$x_2(t)$$: posición del punto entre el resorte y el amortiguador $$b_2$$
 
+  ![image](https://github.com/user-attachments/assets/12aa58a8-838e-4a6d-be76-1bb1b0113b8d)
+
+
 ---
 
 ### 📊 Elementos del sistema
