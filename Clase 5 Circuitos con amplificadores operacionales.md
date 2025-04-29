@@ -20,7 +20,8 @@ $$ \frac{e_o-e_i}{R_2}-\frac{e_i}{R_1}=0 $$
 $$ \frac{e_o}{R_2}=e_i\left(\frac{1}{R_2}+\frac{1}{R_1}\right) $$
 $$ e_o=e_i\left(1+\frac{R_2}{R_1}\right) $$
 
-## ahora se muestra un circuito con elementos que almacenan energía:
+## ahora se muestra un circuito con elementos que almacenan energía:<br>
+
 ![image](Imagenes/o.png) 
 
 $$
@@ -34,6 +35,17 @@ e^{\prime}=0 \\
 \frac{e_i}{R_1}=-\frac{e_o}{R_2}-C \frac{d\left(e_o\right)}{d t}
 \end{gathered}
 $$
+
+### 💡*Ejemplo 1:*
+Obtener el modelo matematico para el circuito de la figura:<br>
+![image](Imagenes/p.png) 
+
+$$ I_1+I_2-I_3-I_4=0 $$
+$$ C_1 \frac{d\left(E_i-V_x\right)}{d t}+\frac{E_i-V_x}{R_1}-C_2 \frac{d\left(V_x-E_{(s)}\right)}{d t}-\frac{V_x-E_s}{R_2}=0 $$
+$$ C_1 \frac{d E_i}{d t}+\frac{E_i}{R_1}+ C_2 d \frac{E_s}{dt}+\frac{E_s}{R_2}=0 $$
+
+
+
 
 
 
