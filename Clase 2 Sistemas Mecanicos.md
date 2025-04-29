@@ -219,7 +219,7 @@ $$k_2 \cdot (x_1(t) - x_2(t)) + b \cdot \frac{d(x_1(t) - x_2(t))}{dt} - k_3 \cdo
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-💡**Ejemplo 1:**
+## 📚Ejercicio 1 (Propio):
 
 ![image](https://github.com/user-attachments/assets/da866a79-91ce-4fa7-ac0d-ce9416c9ba9a)
 
@@ -257,3 +257,5 @@ $$u(t) - k(x_1 - x_2) - b_2(\dot{x}_1 - \dot{x}_2) - b_1 \cdot \dot{x}_1 = m \cd
 $$m \cdot \ddot{x}_1 + (b_1 + b_2) \cdot \dot{x}_1 + k \cdot x_1 = b_2 \cdot \dot{x}_2 + k \cdot x_2 + u(t)$$
 
 
+
+## 📚Ejercicio 2 (Propio):
