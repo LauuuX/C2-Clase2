@@ -108,4 +108,5 @@ $$m\ddot{y} = mg - T \cos(\theta)$$
 
 $$x^2 + y^2 = l^2$$
 
+## 📚Ejercicio 1 (Propio):
 
