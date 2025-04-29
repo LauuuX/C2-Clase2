@@ -1,1 +1,34 @@
-# Sistema rotacional 
+# Sistema rotacional   
+
+
+![Sistema Rotacional](./ruta/a/la/imagen.png)
+
+>🔑 Es un fenómeno mecánico pero la naturaleza del movimiento cambia: ahora es **movimiento angular**.
+
+## Se aplican leyes comparables al movimiento lineal:
+
+---
+
+### Leyes aplicables:
+
+- Fuerza restauradora (resorte rotacional):
+
+$$F_R = k \cdot \varphi \quad \rightarrow \quad \varphi \text{ es el ángulo de torsión}$$
+
+- Fuerza de fricción rotacional:
+
+$$F_F = b \cdot \frac{d\varphi}{dt} \quad \rightarrow \quad \text{es la velocidad angular}$$
+
+- Ley de Newton para movimiento rotacional:
+
+$$T = J \cdot \frac{d^2\varphi}{dt^2} \quad \rightarrow \quad J \text{ es el momento de inercia}$$
+
+- $$\( T(t) \)$$: Torque aplicado.
+- $$\( \theta(t) \)$$: Ángulo de salida o desplazamiento angular.
+- $$\( k \)$$: Constante del resorte de torsión.
+- $$\( b \)$$: Coeficiente de fricción viscosa rotacional.
+- $$\( J \)$$: Momento de inercia de la carga.
+
+
+
+
