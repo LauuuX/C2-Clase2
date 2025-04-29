@@ -259,3 +259,28 @@ $$m \cdot \ddot{x}_1 + (b_1 + b_2) \cdot \dot{x}_1 + k \cdot x_1 = b_2 \cdot \do
 
 
 ## 📚Ejercicio 2 (Propio):
+
+![image](Imagenes/d.png)
+
+La imagen muestra un sistema masa-resorte-amortiguador clásico con una masa m, un resorte de constante k, un amortiguador con coeficiente de fricción viscosa b, y una fuerza externa u(t) aplicada en la dirección x.
+
+Aplicando la segunda ley de Newton, se obtiene la ecuación diferencial que modela el movimiento del sistema:<br>
+$$\sum F= m*a$$
+
+Realizamos el diagrama de cuerpo libre:
+![image](Imagenes/e.png)
+
+donde:
+- $$\( x(t) \):$$ desplazamiento de la masa en el tiempo
+- $$\( \dot{x}(t) \):$$ velocidad
+- $$\( \ddot{x}(t) \):$$ aceleración
+- $$\( m \):$$ masa [kg]
+- $$\( b \):$$ coeficiente de amortiguamiento. [Ns/m]
+- $$\( k \):$$ constante del resorte [N/m]
+- $$\( u(t) \):$$ fuerza externa aplicada [N].
+
+Esta es la ecuación característica de un sistema masa-resorte-amortiguador con entrada forzada.
+
+
+
+
