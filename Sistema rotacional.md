@@ -45,6 +45,8 @@ $$T(t) - k * \theta(t) - b * \frac{d\theta(t)}{dt} = J * \frac{d^2\theta(t)}{dt^
   
 ![image](https://github.com/user-attachments/assets/ef75f0e6-9091-428a-8004-0b5859aba953)
 
+Figura 3. Ejemplo 1
+
 Aplicando la Segunda Ley de Newton para movimiento rotacional:
 
 $$\text{Suma de torques} = \text{Momento de inercia} \times \text{Aceleración angular}$$
@@ -61,3 +63,49 @@ donde:
 
 ##  Sustituyendo:
 $$T(t) - b \cdot \frac{d\theta(t)}{dt} = J \cdot \frac{d^2\theta(t)}{dt^2}$$
+
+##  Grados de Libertad 
+
+- Es el número mínimo de coordenadas independientes requeridas para especificar las posiciones de todos los elementos de un sistema.
+
+- **Ejemplo:** En el caso de un sistema de suspensión, solo se necesita **una coordenada (eje vertical)** para describir la posición.  
+  Por lo tanto, es un sistema con un grado de libertad.
+
+- Desde el punto de vista del modelo, se puede decir:
+
+$$\text{DOF} = \text{Número de ecuaciones de movimiento} - \text{Número de ecuaciones de restricción}$$
+
+![image](https://github.com/user-attachments/assets/fdb8b41a-e717-409f-b210-58c8b8f4974e)
+
+ **Ecuación de movimiento:**
+
+ $$m\ddot{x} + b\dot{x} + kx = 0$$
+
+ **Grado de libertad:**
+
+ $$\text{Grado de libertad} = 1 - 0 = 1$$
+
+ ![image](https://github.com/user-attachments/assets/ae51af76-f6d2-4c20-bed4-ef7eb3f42b7f)
+
+**Ecuaciones de movimiento:**
+
+$$m\ddot{x}_1 + k_1(x_1 - x_2) + k_2x_1 = 0$$
+
+$$k_1(x_1 - x_2) = b_1\dot{x}_2$$
+
+**Grados de libertad:**
+
+$$\text{Grados de libertad} = 2 - 0 = 2$$
+
+![image](https://github.com/user-attachments/assets/69b36e3f-ec4b-4e39-a2de-9201b0b182d4)
+
+
+$$m\ddot{x} = -T \sin(\theta)$$
+
+$$m\ddot{y} = mg - T \cos(\theta)$$
+
+**Ecuación de restricción (longitud constante del hilo):**
+
+$$x^2 + y^2 = l^2$$
+
+
