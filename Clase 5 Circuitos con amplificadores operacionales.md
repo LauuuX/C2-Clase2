@@ -22,7 +22,7 @@ $$ e_o=e_i\left(1+\frac{R_2}{R_1}\right) $$
 
 ## ahora se muestra un circuito con elementos que almacenan energía:<br>
 
-![image](Imagenes/o.png) 
+![image](Imagenes/O.png) 
 
 $$
 i_1-i_2-i_3=0
@@ -40,8 +40,16 @@ $$
 Obtener el modelo matematico para el circuito de la figura:<br>
 ![image](Imagenes/p.png) 
 
+Se realiza la sumatoria de corrientes:
+
 $$ I_1+I_2-I_3-I_4=0 $$
+
+Se sustituyen valores:
+
 $$ C_1 \frac{d\left(E_i-V_x\right)}{d t}+\frac{E_i-V_x}{R_1}-C_2 \frac{d\left(V_x-E_{(s)}\right)}{d t}-\frac{V_x-E_s}{R_2}=0 $$
+
+Ecuación resultante:
+
 $$ C_1 \frac{d E_i}{d t}+\frac{E_i}{R_1}+ C_2 d \frac{E_s}{dt}+\frac{E_s}{R_2}=0 $$
 
 
