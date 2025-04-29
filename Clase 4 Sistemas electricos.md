@@ -102,6 +102,28 @@ $$ \boxed{u(t) - 6 \frac{dy(t)}{dt} - 2y(t) = 0} $$
 
 ![image](Imagenes/l.png) 
 
+$$ I_1+I_2+I_3=0 $$
+$$ \frac{e_i-e_x}{R_1}+C_1 * \frac{d(0-e_x)}{d t}+\frac{e_0-e_x}{R_2})=0 $$
+$$ \Sigma v=$$
+$$ -e_x=V_{R_2}+e_0 $$
+$$ -e_x=R_2 I_3+e_0 $$
+<br>
+$$ I_3=C_2 \frac{d e_0}{d t} $$
+$$ -e_x=R_2 C_2 \frac{d e_0}{d t}+e_0 $$
+
+
+$$ -\frac{d e_x}{d t}=R_2 C_2 \frac{d^2 e_0}{d t^2}+\frac{d e_0}{d t} $$
+$$ \text { Reemplazando queda esta ecuación final: } $$
+$$ \frac{e_i}{R_1}+\frac{R_2 C_2}{R_1} \frac{d e_0}{d t}+\frac{1}{R_1} e_0+R_2 C_2 C_1 \frac{d^2 e_0}{d t^2}+\frac{d e_0}{d t} + \frac{e_0}{R_2} + C_2 \frac{de_0}{d t} + \frac{e_0}{R_2} $$
+
+
+## 📚Ejercicio 1 (Propio):
+
+
+
+
+## 📚Ejercicio 2 (Propio):
+
 
 
 
