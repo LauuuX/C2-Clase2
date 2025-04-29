@@ -257,9 +257,7 @@ $$u(t) - k(x_1 - x_2) - b_2(\dot{x}_1 - \dot{x}_2) - b_1 \cdot \dot{x}_1 = m \cd
 $$m \cdot \ddot{x}_1 + (b_1 + b_2) \cdot \dot{x}_1 + k \cdot x_1 = b_2 \cdot \dot{x}_2 + k \cdot x_2 + u(t)$$
 
 
-
 ## 📚Ejercicio 2 (Propio):
-
 ![image](Imagenes/d.png)
 
 La imagen muestra un sistema masa-resorte-amortiguador clásico con una masa m, un resorte de constante k, un amortiguador con coeficiente de fricción viscosa b, y una fuerza externa u(t) aplicada en la dirección x.
@@ -289,7 +287,7 @@ donde:
 - $$\( k \):$$ constante del resorte [N/m]
 - $$\( u(t) \):$$ fuerza externa aplicada [N].
 
-Ecuación Final:
+### Ecuación Final:
 
 $$ u(t) - k_{2} y(t) - b \cdot y'(t) = m \cdot y''(t) $$ 
 
