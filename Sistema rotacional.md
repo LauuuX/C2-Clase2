@@ -54,8 +54,8 @@ Es decir:
 $$T(t) - F_F = J \cdot \alpha$$
 
 donde:
-- $$\( \alpha = \frac{d^2\theta(t)}{dt^2} \)$$ es la aceleración angular,
-- $$\( F_F = b \cdot \frac{d\theta(t)}{dt} \)$$ es la fuerza de fricción rotacional.
+- $$\(\alpha = \frac{d^2\theta(t)}{dt^2}\)$$ es la aceleración angular,
+- $$\(F_F = b \cdot \frac{d\theta(t)}{dt}\)$$ es la fuerza de fricción rotacional.
 
 
 
