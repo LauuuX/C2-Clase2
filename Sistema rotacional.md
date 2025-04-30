@@ -110,3 +110,34 @@ $$x^2 + y^2 = l^2$$
 
 ## 📚Ejercicio 1 (Propio):
 
+![image](https://github.com/user-attachments/assets/70f84f40-8816-4633-ba5b-b2f9c8d65514)
+
+## 1. Ecuación de movimiento
+
+Segunda ley de Newton para sistemas rotacionales:
+
+$$T(t) - b \dot{\theta}(t) = J \ddot{\theta}(t)$$
+
+## 📚Ejercicio 2 (Propio):
+
+![image](https://github.com/user-attachments/assets/1abe5e8f-f429-4172-92fb-96440ec2db0a)
+
+### Segunda Ley para sistemas rotacionales
+
+$$\text{Torque neto} = J \cdot \alpha = J \ddot{\theta}(t)$$
+
+1. **Torque aplicado (positivo)**:
+   
+   $$+T(t)$$
+
+3. **Torque del resorte (negativo)**:  
+
+   $$-k \theta(t)$$
+ 
+4. **Torque del amortiguador (negativo)**:  
+   $$-b \dot{\theta}(t)$$
+   
+
+Ecuación total del sistema:
+
+$$T(t) - k \theta(t) - b \dot{\theta}(t) = J \ddot{\theta}(t)$$
