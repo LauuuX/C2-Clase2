@@ -162,7 +162,7 @@ $$ S V_e(s)=\frac{R}{L} V_C(s)+R \cdot C \cdot S^2 V_c(s)+S V_C(s) $$
 
 Utilizamos Factor comun para simplificar más la ecuación:
 
-$$ S v_e(s)=V_{C(s)} \frac{R}{L}+R \cdot C \cdot s^2+S  $$
+$$ S v_e(s)=V_{C(s)} ( \frac{R}{L}+R \cdot C \cdot s^2+S  )$$
 
 Multiplicamos por L para quitar fracciones:
 
@@ -176,6 +176,58 @@ $$ \frac{V_c{(s)}}{V_{e(s)}}=\frac{L S}{R+R L C s^2+L S} $$
 
 ## 📚Ejercicio 2 (Propio):
 
+![image](Imagenes/r.png) 
+
+
+Para este caso utilizaremos el metodo de mallas.
+
+Realizamos el analisis de cada una:<br>
+
+Malla 1:
+
+$$ Ve = V_{L} $$
+
+Malla 2:
+
+$$V_{L} = V_{R} + V_{C} $$
+
+Nodo comun:
+
+$$ i_{1} = i_{L} + i_{C} $$
+
+Colocamos las ecuaciones de referencia:<br>
+
+$$ i_C=C \frac{d V_C}{d t} $$
+$$ V_L=L \frac{d i_L}{d t} $$
+$$ i_R=\frac{V_R}{R} $$
+
+Sustituimos valores en la primer malla:
+
+$$ Ve = i_{C}*R + V_{C} $$
+
+Como el objetivo es dejar todos los terminos en función de i_c, derivamos ambos lados de la ecuación.
+
+$$ \frac{d}{d t} V_e= R \frac{di_c}{d t} + \frac{d V_c}{dt} $$
+
+Reemplazamos para dejarlo en terminos de i_c:
+
+$$ \frac{d}{d t} V_e= R \frac{di_c}{d t} + \frac{i_c}{C} $$
+
+Ahora realizamos la transformada de la place:
+
+$$ S V_e(s)= R_s i_c(s) + \frac{1}{c} i_C(s) $$
+
+Utilizamos Factor comun para simplificar más la ecuación:
+
+$$ S v_e(s)=i_{C(s)} (R_s + \frac{1}{C} ) $$
+
+Multiplicamos por C para quitar fracciones:
+
+$$ C s V_e(s)=i_{C(s)} (C R_s + \frac{C}{C} ) $$
+
+Ecuación final :
+
+$$ \frac{i_c{(s)}}{V_{e(s)}}=\frac{C s}{C R_s +1} $$
 
 
 
