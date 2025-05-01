@@ -118,7 +118,59 @@ $$ \frac{e_i}{R_1}+\frac{R_2 C_2}{R_1} \frac{d e_0}{d t}+\frac{1}{R_1} e_0+R_2 C
 
 
 ## 📚Ejercicio 1 (Propio):
+![image](Imagenes/q.png) 
 
+Para este caso utilizaremos el metodo de mallas.
+
+Realizamos el analisis de cada una:<br>
+
+Malla 1:
+
+$$ Ve = V_{R} + V_{L} $$
+
+Malla 2:
+
+$$V_{L} = V_{C} $$
+
+Nodo comun:
+
+$$ i_{R} = i_{L} + i_{C} $$
+
+Colocamos las ecuaciones de referencia:<br>
+
+$$ i_C=C \frac{d V_C}{d t} $$
+$$ V_L=L \frac{d i_L}{d t} $$
+$$ i_R=\frac{V_R}{R} $$
+
+Sustituimos valores en la primer malla:
+
+
+$$ V_e=\dot{i}_R \cdot R+V_L $$
+$$ V_e=\left(i_L+i_C\right) \cdot R+V_L $$
+$$ V_e=\left(i_L+C \frac{d V_C}{d t}\right) \cdot R+V_L $$
+
+derivamos en ambos lados para reemplazar i_L.
+
+$$ \frac{d}{d t} V_e=\frac{d}{d t}\left(i L+C \frac{d V_c}{d t}\right) \cdot R+\frac{d}{d t} V_L $$
+$$ \frac{d}{d t} V_e=\frac{d}{d t} i_L+ C \frac{d^2 V_c}{d t^2} \cdot R+\frac{d}{d t} V_L $$
+$$ \frac{d}{d t} V_e=\left(\frac{V_L}{L}+ C \frac{d^2 V_c}{d t^2}\right) \cdot R+\frac{d}{d t} V_L $$
+$$ \frac{d}{d t} V_e=\frac{V_c}{L}+ C \left(\frac{d^2 V_c}{d t^2}\right) \cdot R+\frac{d}{d t} V_c $$
+
+Aplicamos la Place:
+
+$$ S V_e(s)=\frac{R}{L} V_C(s)+R \cdot C \cdot S^2 V_c(s)+S V_C(s) $$
+
+Utilizamos Factor comun para simplificar más la ecuación:
+
+$$ S v_e(s)=V_{C(s)} \frac{R}{L}+R \cdot C \cdot s^2+S  $$
+
+Multiplicamos por L para quitar fracciones:
+
+$$ L \cdot S V_{e(s)}=V_{C(s)}\left(\frac{L R}{L}+R L C S^2+L S\right) $$
+
+despejamos en terminos de entradas y salidas para obtener la ecuación final :
+
+$$ \frac{V_c{(s)}}{V_{e(s)}}=\frac{L S}{R+R L C s^2+L S} $$
 
 
 
