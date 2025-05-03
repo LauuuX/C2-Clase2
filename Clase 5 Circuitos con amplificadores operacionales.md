@@ -52,6 +52,58 @@ Ecuación resultante:
 
 $$ C_1 \frac{d E_i}{d t}+\frac{E_i}{R_1}+ C_2 d \frac{E_s}{dt}+\frac{E_s}{R_2}=0 $$
 
+#  Sistemas Hidráulicos de Tanques
+> 🔑 Son  aquellos  sistemas  en  los  que  seproduce  una  circulación  de  líquido  a  lolargo  de  los  elementos  que  forman  elsistema bajo la acción de diferencias depresión.  Los  caudales  de  líquido  y  ladiferencia  de  presiones  son  lasmagnitudes  que  se  pretenden  modelar.Las  ecuaciones  de  balance  surgen  de  laley de conservación de masa.
+
+
+##  Parámetros y Variables
+
+- $$qi$$: Flujo de entrada al tanque.  
+- $$q1$$: Flujo de salida del tanque.  
+- $$R1$$: Resistencia hidráulica al flujo.  
+- $$A1$$: Área transversal del tanque.  
+- $$h1$$: Altura o nivel de líquido en el tanque.
+  
+![image](https://github.com/user-attachments/assets/4faa108c-c720-41ab-a5c4-3ae896fdb929)
+
+- Flujo de salida del tanque
+$$q_1 = \frac{h_1}{R_1}$$
+
+- Intercambio de energía
+
+$$A_1 \frac{dh_1}{dt} = q_i - q_1$$
+
+## Modelado de un Tanque Hidráulico
+
+### Modelo con $$q_i$$ como entrada y $$h_1$$ como salida
+
+- Flujo de salida del tanque:
+
+  $$q_1 = \frac{h_1}{R_1}$$
+
+- Intercambio de energía:
+
+  $$A_1 \frac{dh_1}{dt} = q_i - q_1$$
+
+- Reemplazando:
+
+  $$A_1 \frac{dh_1}{dt} = q_i - \frac{h_1}{R_1}$$
+
+  $$q_1 = \frac{h_1}{R_1}$$
+
+  $$A_1 \frac{dh_1}{dt} = q_i - q_1$$
+
+- Se despeja $$h_1$$:
+
+  $$h_1 = q_1 \cdot R_1$$
+
+  $$\frac{dh_1}{dt} = R_1 \frac{dq_1}{dt}$$
+
+- Reemplazando:
+
+  $$R_1 A_1 \frac{dq_1}{dt} = q_i - q_1$$
+
+
 
 
 
