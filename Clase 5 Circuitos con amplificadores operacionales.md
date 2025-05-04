@@ -191,6 +191,8 @@ $$A_1 \frac{d}{dt}\left(R_1 \left(A_2 \frac{dh_2}{dt} + q_2\right) + h_2\right) 
 
 $$A_1 R_1 A_2 \frac{d^2 h_2}{dt^2} + (A_1 R_1 + A_1 A_2 + R_2 A_2) \frac{dh_2}{dt} + \frac{h_2}{R_2} = q_i$$
 
+## 📚Ejercicio 1 (Propio):
+
 ![image](https://github.com/user-attachments/assets/c1b86c48-2b44-4265-b2c8-379595d82db7)
 
 
@@ -247,9 +249,30 @@ $$V_o = \frac{R_x(R_2 + R_f)}{R_2(R_1 + R_x)} V_1 - \frac{R_f}{R_2} V_2$$
 
 $$V_o = \frac{R_x(R_2 + R_f)}{R_2(R_1 + R_x)} V_1 - \frac{R_f}{R_2} V_2$$
 
+## 📚Ejercicio 2 (Propio):
+
+![image](https://github.com/user-attachments/assets/413e091d-4511-4a76-b8db-07b2aeab38e2)
 
 
+Flujo a través de $$R_1$$:
 
+$$Q_1 = \frac{h_1 - h_2}{R_1}$$
+
+Flujo a través de $$R_2$$:
+
+$$Q_2 = \frac{h_2}{R_2}$$
+
+Sustituyendo $$h_2$$ desde la ecuación de $$Q_2$$:
+
+$$h_2 = Q_2 \cdot R_2$$
+
+$$Q_1 = \frac{h_1 - Q_2 R_2}{R_1}$$
+
+$$Q_1 R_1 = h_1 - Q_2 R_2$$
+
+Despejando $$Q_2$$:
+
+$$Q_2 = \frac{h_1 - Q_1 R_1}{R_2}$$
 
 
 
