@@ -191,6 +191,63 @@ $$A_1 \frac{d}{dt}\left(R_1 \left(A_2 \frac{dh_2}{dt} + q_2\right) + h_2\right) 
 
 $$A_1 R_1 A_2 \frac{d^2 h_2}{dt^2} + (A_1 R_1 + A_1 A_2 + R_2 A_2) \frac{dh_2}{dt} + \frac{h_2}{R_2} = q_i$$
 
+![image](https://github.com/user-attachments/assets/c1b86c48-2b44-4265-b2c8-379595d82db7)
+
+
+ - Deducción del voltaje de salida $$V_o$$ de un amplificador 
+
+Igualdades asumidas:
+
+- $$I_1 = I_3$$
+- $$I_2 = I_4$$
+- $$V_{x1} = V_{x2}$$
+
+Análisis del nodo izquierdo (entrada $$V_1$$):
+
+Ley de Ohm aplicada al nodo:
+
+$$\frac{V_1 - V_{x1}}{R_1} = \frac{V_{x1}}{R_x}$$
+
+$$\frac{V_1}{R_1} = \frac{V_{x1}}{R_x} + \frac{V_{x1}}{R_1}$$
+
+$$\frac{V_1}{R_1} = V_{x1} \left( \frac{1}{R_1} + \frac{1}{R_x} \right)$$
+
+$$\frac{V_1}{R_1} = \frac{V_{x1}(R_1 + R_x)}{R_1 R_x}$$
+
+$$V_{x1} = \frac{V_1 R_x}{R_1 + R_x}$$
+
+Análisis del nodo derecho (entrada $$V_2$$ y salida $$V_o$$):
+
+$$\frac{V_2 - V_{x2}}{R_2} = \frac{V_{x2} - V_o}{R_f}$$
+
+$$(V_2 - V_{x2})R_f = (V_{x2} - V_o)R_2$$
+
+$$V_2 R_f - V_{x2} R_f = V_{x2} R_2 - V_o R_2$$
+
+$$V_2 R_f + V_o R_2 = V_{x2}(R_f + R_2)$$
+
+$$V_{x2} = \frac{V_2 R_f + V_o R_2}{R_2 + R_f}$$
+
+Igualamos los nodos: $$V_{x1} = V_{x2}$$
+
+$$\frac{V_1 R_x}{R_1 + R_x} = \frac{V_2 R_f + V_o R_2}{R_2 + R_f}$$
+
+$$V_1 R_x (R_2 + R_f) = (V_2 R_f + V_o R_2)(R_1 + R_x)$$
+
+$$V_1 R_x R_2 + V_1 R_x R_f$$
+
+$$V_2 R_f R_1 + V_2 R_f R_x + V_o R_2 R_1 + V_o R_2 R_x$$
+
+
+$$V_1 R_x (R_2 + R_f) - V_2 R_f (R_1 + R_x) = V_o R_2 (R_1 + R_x)$$
+
+$$V_o = \frac{R_x(R_2 + R_f)}{R_2(R_1 + R_x)} V_1 - \frac{R_f}{R_2} V_2$$
+
+## Expresión final:
+
+$$V_o = \frac{R_x(R_2 + R_f)}{R_2(R_1 + R_x)} V_1 - \frac{R_f}{R_2} V_2$$
+
+
 
 
 
