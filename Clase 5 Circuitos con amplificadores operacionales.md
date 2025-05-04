@@ -106,6 +106,64 @@ $$A_1 \frac{dh_1}{dt} = q_i - q_1$$
 
 ## Dos tanques 
 
+![image](https://github.com/user-attachments/assets/07372534-3c3f-4064-abaf-4e5f2b59293e)
+
+
+- Tanque 1
+
+$$q_1 = \frac{h_1}{R_1} \Rightarrow h_1 = q_1 R_1$$
+
+$$A_1 \frac{dh_1}{dt} = q_i - q_1$$
+
+- Sustituyendo $$h_1 = q_1 R_1$$:
+
+$$A_1 R_1 \frac{dq_1}{dt} = q_i - q_1$$
+
+- Tanque 2
+
+$$q_2 = \frac{h_2}{R_2}$$
+
+$$A_2 \frac{dh_2}{dt} = q_1 - q_2$$
+
+- Sustituyendo $$q_2$$:
+
+$$q_1 = A_2 \frac{dh_2}{dt} + \frac{h_2}{R_2}$$
+
+Multiplicando por $$R_2$$:
+
+$$A_2 R_2 \frac{dh_2}{dt} + h_2 = q_1 R_2$$
+
+- Función
+  
+$$A_2 R_2 \frac{d^2 h_2}{dt^2} + \frac{dh_2}{dt} = \frac{dq_1}{dt} R_2$$
+
+
+
+## Tanques interconectados
+
+- Ecuaciones base:
+
+$$
+q_1 = \frac{h_1 - h_2}{R_1}, \quad q_2 = \frac{h_2}{R_2}
+$$
+
+$$
+A_1 \frac{dh_1}{dt} = q_i - q_1
+$$
+
+$$
+A_2 \frac{dh_2}{dt} = q_1 - q_2
+$$
+
+$$
+R_2 A_2 \frac{dq_2}{dt} = q_1 - q_2
+$$
+
+- Sustituyendo:
+
+$$
+A_1 \frac{dh_1}{dt} = q_i - R_2 A_2 \frac{dq_2}{dt} - q_2
+$$
 
 ## Tanques interconectados 
 $$q_1 = \frac{h_1 - h_2}{R_1} \qquad q_2 = \frac{h_2}{R_2}$$
