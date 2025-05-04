@@ -141,31 +141,10 @@ $$A_2 R_2 \frac{d^2 h_2}{dt^2} + \frac{dh_2}{dt} = \frac{dq_1}{dt} R_2$$
 
 ## Tanques interconectados
 
+![image](https://github.com/user-attachments/assets/f920ddb3-9f69-4e3e-b705-a12bddded9ad)
+
 - Ecuaciones base:
 
-$$
-q_1 = \frac{h_1 - h_2}{R_1}, \quad q_2 = \frac{h_2}{R_2}
-$$
-
-$$
-A_1 \frac{dh_1}{dt} = q_i - q_1
-$$
-
-$$
-A_2 \frac{dh_2}{dt} = q_1 - q_2
-$$
-
-$$
-R_2 A_2 \frac{dq_2}{dt} = q_1 - q_2
-$$
-
-- Sustituyendo:
-
-$$
-A_1 \frac{dh_1}{dt} = q_i - R_2 A_2 \frac{dq_2}{dt} - q_2
-$$
-
-## Tanques interconectados 
 $$q_1 = \frac{h_1 - h_2}{R_1} \qquad q_2 = \frac{h_2}{R_2}$$
 
 $$A_1 \frac{dh_1}{dt} = (q_i - q_1) \qquad A_2 \frac{dh_2}{dt} = (q_1 - q_2)$$
@@ -186,17 +165,18 @@ $$A_1 R_1 R_2 A_2 \frac{d^2 q_2}{dt^2} + \left( A_1 R_1 + A_1 R_2 + R_2 A_2 \rig
 
 ## Actividad 
 - Desarrollar el modelo con $$h_2$$ como salida
- 
+  
+ ![image](https://github.com/user-attachments/assets/d8fb0ae8-db1c-4b4e-abbf-ff4088f68787)
 
 ## Ecuaciones del sistema
 
-### 1. Flujo de salida del segundo tanque
+### Flujo de salida del segundo tanque
 $$q_2 = \frac{h_2}{R_2}$$
 
-### 2. Ecuación de conservación de masa en el segundo tanque
+###  Ecuación de conservación de masa en el segundo tanque
 $$A_2 \frac{dh_2}{dt} = q_1 - q_2$$
 
-### 3. Flujo entre los tanques
+### Flujo entre los tanques
 $$q_1 = \frac{h_1 - h_2}{R_1}$$
 
 $$A_1 \frac{dh_1}{dt} = q_i - q_1$$
@@ -207,7 +187,7 @@ $$A_1 \frac{d}{dt}(R_1 q_1 + h_2) = q_i - q_1$$
 
 $$A_1 \frac{d}{dt}\left(R_1 \left(A_2 \frac{dh_2}{dt} + q_2\right) + h_2\right) = q_i - \left(A_2 \frac{dh_2}{dt} + q_2\right)$$
 
-### 7. Ecuación final con \( h_2 \) como salida
+### Ecuación final con $$h_2$$ como salida
 
 $$A_1 R_1 A_2 \frac{d^2 h_2}{dt^2} + (A_1 R_1 + A_1 A_2 + R_2 A_2) \frac{dh_2}{dt} + \frac{h_2}{R_2} = q_i$$
 
