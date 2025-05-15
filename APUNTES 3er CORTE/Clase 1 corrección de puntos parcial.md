@@ -89,6 +89,6 @@ $$
 \end{cases}
 $$
 
-Este sistema describe completamente el comportamiento de la corriente en el capacitor $$C = 0.2 \, \text{F}$$.
+
 
 
