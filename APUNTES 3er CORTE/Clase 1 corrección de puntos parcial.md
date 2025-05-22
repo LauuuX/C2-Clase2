@@ -89,6 +89,18 @@ $$
 \end{cases}
 $$
 
+## Tercer punto
+
+### Enunciado
+
+1. Obtener las ecuaciones diferenciales del siguiente sistema para que quede u(t) como entrada y "Y1" y "Y2" como salidas. Sabiendo que la masa M2 está suspendida dentro de la masa M1 que tiene una forma parecida a un marco con un espacio en el centro y existe fricción entre ambas, con coeficiente B3. La masa M1 está suspendida dentro de una guía vertical que se mantiene inmóvil y el coeficiente fricción entre las superficies es B2. (Solo se acepta procedimiento completo visto en clase). (2 Puntos)
+
+
+
+
+
+
+
 
 
 
