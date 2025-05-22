@@ -101,13 +101,30 @@ Se realizan sus respectivos diagramas de cuerpo libre:
 
 ![image](imagenes2/b.png)
 
+A partir de los diagramas de cuerpo libre se realizan sus respectivas ecuaciones:
 
+Ecucaion para la primer masa:
+
+$$U+F _{w1} - F _{k2} -F _{B1} -F _{B2} -F _{B3} - F _{k1} = m _{1} * a _{m1}$$
+
+Luego de tener la ecuacion con sus fuerzas continuamos reemplazando cada una por sus caracteristicas dinamicas:
+
+ $$U+ (m _{1} * g) - k _{2} * y _{1(𝑡)} - B _{1} * y _{1(𝑡)} ^{ ' } - B _{2} * y _{1(𝑡)} ^{ ' } - B _{3} * ( y _{1(𝑡)} ^{ ' } -  y _{2(𝑡)} ^{ ' } ) - k _{1} * ( y _{1(𝑡)}  -  y _{2(𝑡)}  ) = m _{1} * y _{1(𝑡)} ^{ '' }$$ 
     
+Ecucaion para la segunda masa:
+
+$$F _{k1}+F _{w2} -F _{B3}   = m _{2} * a _{m2}$$
+
+Luego de tener la ecuacion con las fuerzas continuamos reemplazando cada una por sus caracteristicas dinamicas en este caso para la masa 2:
+
+$$k _{1} * ( y _{1(𝑡)}  -  y _{2(𝑡)} ) +(m _{2} * g ) - B _{3} * ( y _{1(𝑡)} ^{ ' } -  y _{2(𝑡)} ^{ ' } )   = m _{2} * y _{2(𝑡)} ^{ '' }$$
 
 
+Estas serian entonces nuestras 2 ecuaciones finales resultantes:
 
+$$U+ (m _{1} * g) - k _{2} * y _{1(𝑡)} - B _{1} * y _{1(𝑡)} ^{ ' } - B _{2} * y _{1(𝑡)} ^{ ' } - B _{3} * ( y _{1(𝑡)} ^{ ' } -  y _{2(𝑡)} ^{ ' } ) - k _{1} * ( y _{1(𝑡)}  -  y _{2(𝑡)}  ) = m _{1} * y _{1(𝑡)} ^{ '' }$$
 
-
+$$k _{1} * ( y _{1(𝑡)}  -  y _{2(𝑡)} ) +(m _{2} * g ) - B _{3} * ( y _{1(𝑡)} ^{ ' } -  y _{2(𝑡)} ^{ ' } )   = m _{2} * y _{2(𝑡)} ^{ '' }$$
 
 
 
