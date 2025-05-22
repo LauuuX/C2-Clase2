@@ -89,7 +89,7 @@ $$
 \end{cases}
 $$
 
-## Tercer punto
+## Primer punto parcial 2:
 
 ### Enunciado
 
@@ -126,5 +126,18 @@ $$U+ (m _{1} * g) - k _{2} * y _{1(𝑡)} - B _{1} * y _{1(𝑡)} ^{ ' } - B _{2
 
 $$k _{1} * ( y _{1(𝑡)}  -  y _{2(𝑡)} ) +(m _{2} * g ) - B _{3} * ( y _{1(𝑡)} ^{ ' } -  y _{2(𝑡)} ^{ ' } )   = m _{2} * y _{2(𝑡)} ^{ '' }$$
 
+## Segundo punto parcial 2:
 
+2. Para el circuito de la figura hallar la/s ecuación diferencial que permitiría obtener la función que describe la tensión en la resistencia de 50 Q. Seleccione el método de análisis que prefiera o considere más adecuado. Asuma que el circuito está totalmente sin energía en t=0 y que la fuente de voltaje e(t) es constante. (Solo se acepta procedimiento completo visto en clase) (3 puntos)
+
+
+
+
+
+
+
+
+
+
+   
 
