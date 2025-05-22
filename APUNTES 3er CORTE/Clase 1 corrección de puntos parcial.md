@@ -97,13 +97,10 @@ $$
 
 ![image](imagenes2/a.png)
 
-Se realizan diagramas de cuerpo libre:
+Se realizan sus respectivos diagramas de cuerpo libre:
 
- 1. Diagrama para la m1
+![image](imagenes2/b.png)
 
-    
-
- 3. Diagrama para la m2
 
     
 
