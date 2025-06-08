@@ -345,11 +345,5 @@ $$ \mathcal{L}\{r(t)\} = \frac{A}{s^3} $$
 - Se asumen condiciones iniciales igual a cero.
 - Polos y ceros se obtienen igualando los polinomios a cero.
 
----
-
-## ❓ Preguntas...
-
-> ¡Gracias por tu atención! Si tienes dudas, escríbeme o comenta el `README.md` 😄
-
 
 
