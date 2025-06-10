@@ -100,7 +100,7 @@ Los **ceros** de una función de transferencia son los valores de \( s \) que ha
 
 
 
-## 5.  Ejemplo: Cálculo de ceros
+##  Ejemplo: Cálculo de ceros
 
 Dada la función:
 
@@ -125,12 +125,7 @@ $$
 Por lo tanto, el sistema tiene un **cero real en** 
 $$\( s = \frac{1}{3} \)$$
 
-
-## 🎯 Zeros de una función de transferencia
-
-- Se iguala \( N(s) = 0 \)
-- Si el numerador es cero, la función se vuelve cero.
-- Los valores de \( s \) pueden ser reales o complejos.
+![image](https://github.com/user-attachments/assets/f99208e2-b112-434b-89cc-845ce46ff220)
 
 ### Hallar los zeros de una función de transferencia:
 
@@ -145,9 +140,9 @@ $$s^2 + 4s + 1 = 0$$
 $$\[ s = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]$$
 
 Con:
-- $$\( a = 1 \)$$ 
-- $$\( b = 4 \)$$ 
-- $$\( c = 1 \)$$
+- $$a = 1$$ 
+- $$b = 4$$ 
+- $$c = 1$$
 
 Reemplazamos:
 
@@ -184,37 +179,70 @@ Polos del sistema:
 $$s = -1, \quad s = -2$$
 
 
-## 📍 Ubicación de polos y zeros
+### Ubicación de polos y zeros
 
-> ![Plano de polos y ceros](ruta/a/imagen5.png)
+![image](https://github.com/user-attachments/assets/1fd2c862-564c-42e9-b47c-c648e28954d6)
 
+## Ejemplo
+  * Hallar los polos de la siguiente función de transferencia
+    
+Dada la función de transferencia:
 
-## 📍 Ubicación de polos y zeros en el plano complejo
+$$G(s) = \frac{s + 2}{(s + 3)(s^2 + 0.5s + 1)}$$
 
-> ![image](https://github.com/user-attachments/assets/beb5db50-0dd8-4677-a00a-7a61f11025ae)
+### Paso 1: Identificar el denominador $$D(s)$$
 
-- Polos complejos conjugados
-- Polos reales diferentes
-- Polos iguales repetidos
+$$D(s) = (s + 3)(s^2 + 0.5s + 1)$$
+
+### Paso 2: Igualar a cero
+
+$$(s + 3)(s^2 + 0.5s + 1) = 0$$
+
+### Paso 3: Resolver cada factor
+
+- Primer factor:
+
+$$s + 3 = 0 \Rightarrow s = -3$$
+
+- Segundo factor:
+$$s^2 + 0.5s + 1 = 0$$
+
+Usamos la fórmula general:
+
+$$s = \frac{-0.5 \pm \sqrt{(0.5)^2 - 4(1)(1)}}{2(1)} = \frac{-0.5 \pm \sqrt{0.25 - 4}}{2}$$
+
+$$s = \frac{-0.5 \pm \sqrt{-3.75}}{2} = \frac{-0.5 \pm j\sqrt{3.75}}{2}$$
+
+$$s = -0.25 \pm j\cdot 0.968$$
+
+### ✅ Resultado final:
+
+Los polos son:
+
+- $$s = -3$$ 
+- $$s = -0.25 + j\cdot 0.968$$  
+- $$s = -0.25 - j\cdot 0.968$$
+
+Dos polos complejos conjugados y uno real negativo.
+
+ > ![image](https://github.com/user-attachments/assets/ea9b8561-b854-4c58-a388-4b6feab26f0e)
 
 ---
 
 ## 🧩 Grado de una función de transferencia
 
-Se define por el polinomio característico en el denominador.
+- Otra forma de clasificar las funciones de transferencia es por su **orden** o **grado**.
+- Este grado está determinado por el **polinomio característico**, es decir, el polinomio del denominador de \( G(s) \).
+- El **grado** corresponde al mayor exponente de \( s \) en el denominador.
 
-### Ejemplo:
+### 📘 Ejemplo:
 
-$$D(s) = s^2 + 3s + 2 = 0 \Rightarrow$$
-$$s = -1, -2$$
+$$G(s) = \frac{3s - 1}{s^2 + 3s + 2}$$
 
----
+- El polinomio característico es: $$s^2 + 3s + 2$$
+- El mayor exponente de $$s$$es 2
 
-## 📍 Ubicación de polos y zeros en el plano complejo
-
-**→ Segundo orden**
-
----
+✅ **Por lo tanto, la función de transferencia es de segundo orden.**
 
 ## 🔁 Teorema del valor final
 
@@ -224,119 +252,177 @@ $$ \lim_{t \to \infty} f(t) = \lim_{s \to 0} sF(s) $$
 
 ### Ejemplo:
 
-$$ G(s) = \frac{4}{5s + 1} $$
+$$G(s) = \frac{4}{5s + 1}$$
 
-Si \( U(s) = \frac{4}{s} \), entonces:
+Si  $$U(s) = \frac{4}{s}$$, entonces:
 
-$$ Y(s) = \frac{4}{s(5s + 1)} $$
+$$Y(s) = \frac{4}{s(5s + 1)}$$
 
 Aplicando el teorema:
 
-$$ \lim_{s \to 0} sY(s) = \lim_{s \to 0} \frac{4}{5s + 1} = 4 $$
+$$\lim_{s \to 0} sY(s) = \lim_{s \to 0} \frac{4}{5s + 1} = 4$$
+
+![image](https://github.com/user-attachments/assets/c69ac77e-5a28-4cb3-a123-a0c54ce98dc4)
 
 ---
 
-## 📝 Actividad #1
+## 📝 Actividad 
 
 ### Calcular el valor final para:
 
-1. $$ G(s) = \frac{8}{s^3 + 6s^2 + 11s + 6} $$
+1. $$G(s) = \frac{8}{s^3 + 6s^2 + 11s + 6}$$
 
-   Entrada escalón: \( U(s) = \frac{1}{s} \)
-
-   $$ Y(s) = \frac{8}{s(s^3 + 6s^2 + 11s + 6)} $$
-
-   Valor final:
-
-   $$ \lim_{s \to 0} sY(s) = \lim_{s \to 0} \frac{8}{s^3 + 6s^2 + 11s + 6} = \frac{8}{6} = 1.33 $$
-
-2. $$ G(s) = \frac{8}{s^3 + 8s^2 + 15s} $$
-
-   Entrada escalón: \( U(s) = \frac{1}{s} \)
-
-   $$ Y(s) = \frac{8}{s(s^3 + 8s^2 + 15s)} $$
-
-   $$ = \frac{8}{s^4 + 8s^3 + 15s^2} $$
+   Entrada escalón: $$U(s) = \frac{1}{s}$$
+   $$Y(s) = \frac{8}{s(s^3 + 6s^2 + 11s + 6)}$$
 
    Valor final:
 
-   $$ \lim_{s \to 0} \frac{8s}{s^4 + 8s^3 + 15s^2} = \lim_{s \to 0} \frac{8}{s^3 + 8s^2 + 15s} = \infty $$
+   $$\lim_{s \to 0} sY(s) = \lim_{s \to 0} \frac{8}{s^3 + 6s^2 + 11s + 6} = \frac{8}{6} = 1.33$$
+
+2. $$G(s) = \frac{8}{s^3 + 8s^2 + 15s}$$
+
+   Entrada escalón: $$U(s) = \frac{1}{s}$$
+
+   $$Y(s) = \frac{8}{s(s^3 + 8s^2 + 15s)}$$
+
+   $$= \frac{8}{s^4 + 8s^3 + 15s^2}$$
+
+   Valor final:
+
+   $$\lim_{s \to 0} \frac{8s}{s^4 + 8s^3 + 15s^2} = \lim_{s \to 0} \frac{8}{s^3 + 8s^2 + 15s} = \infty$$
 
    👉 *No existe valor final finito; sistema inestable ante escalón.*
 
 ---
 
-## 🧠 Actividad #2 (Completa)
+# 📚 Entradas de prueba comunes en sistemas
 
-Para la ecuación diferencial:
+## Respuesta de un sistema 
+- Sería necesario modelar cada sistema desde cero si se tuvieran en cuenta las **señales reales**.
+- Estas señales reales pueden verse afectadas por:
+  - Ruido
+  - Diferentes rangos
+  - Diferentes tipos de señales
+- En la práctica, esto haría muy complejo el análisis, por eso se utilizan modelos idealizados que permiten simular la respuesta del sistema con mayor facilidad.
 
-$$ \ddddot{y} + 5\ddot{y} + 13.5\dot{y} + 3.75y = 7.5\dot{u} + 3.75u $$
+![image](https://github.com/user-attachments/assets/f37ea0c9-3ef9-4cfd-8d1f-11b316989c53)
 
-Transformada de Laplace (con condiciones iniciales cero):
+## Posibles entradas de un sistema 
 
-\( s^3Y(s) + 5s^2Y(s) + 13.5sY(s) + 3.75Y(s) = 7.5sU(s) + 3.75U(s) \)
-
-Factorizando:
-
-$$ Y(s)(s^3 + 5s^2 + 13.5s + 3.75) = U(s)(7.5s + 3.75) $$
-
-### Función de transferencia:
-
-$$ G(s) = \frac{Y(s)}{U(s)} = \frac{7.5s + 3.75}{s^3 + 5s^2 + 13.5s + 3.75} $$
-
-### Zeros:
-
-Numerador: \( 7.5s + 3.75 = 0 \Rightarrow s = -0.5 \)
-
-### Polos:
-
-Denominador: \( s^3 + 5s^2 + 13.5s + 3.75 = 0 \) → usar método numérico o software (raíces complejas reales)
-
-### Valor final frente a:
-
-- Escalón unitario: \( U(s) = \frac{1}{s} \)
-
-  $$ Y(s) = \frac{7.5s + 3.75}{s(s^3 + 5s^2 + 13.5s + 3.75)} $$
-
-  $$ \lim_{s \to 0} sY(s) = \frac{3.75}{3.75} = 1 $$
-
-- Rampa de pendiente 5: \( U(s) = \frac{5}{s^2} \)
-
-  $$ Y(s) = \frac{(7.5s + 3.75)(5)}{s^2(s^3 + 5s^2 + 13.5s + 3.75)} $$
-
-  $$ \lim_{s \to 0} sY(s) = \lim_{s \to 0} \frac{5(7.5s + 3.75)}{s(s^3 + 5s^2 + 13.5s + 3.75)} = \infty $$
-
-  👉 *No hay valor final finito para entrada tipo rampa.*
-
----
-
-## 📚 Entradas de prueba comunes en sistemas
+- Si la solución de una ecuación diferencial depende de la entrada, la respuesta de un Sistema También
+- Es muy difícil conocer la señales que están ocurriendo en un Sistema ya que depende de muchos factores como ruido, tipo de señales, ambiente , entre otras
+- Además el Sistema de control debe diseñarse para que funcione ante cualquier señal
+- En control se utilizan diferentes tipos de señales de prueba para evaluar el desempeño de un sistema
 
 ### 1. Entrada escalón:
+- Es una entrada que considera un cambio de nivel repentino 
+$$u(t) = \begin{cases} A, & t > t_0 \\ 0, & t < t_0 \end{cases}$$
+ ![image](https://github.com/user-attachments/assets/afcd8459-5632-4601-8fd2-55ecdca0b5bd)
 
-$$ u(t) = \begin{cases} A, & t > t_0 \\ 0, & t < t_0 \end{cases} $$
+Transformada:
 
-Transformada de Laplace:
-
-$$ \mathcal{L}\{u(t)\} = \frac{A}{s} $$
+$$\mathcal{L}\{u(t)\} = \frac{A}{s}$$
 
 ### 2. Entrada rampa:
 
-$$ x(t) = \begin{cases} At, & t > t_0 \\ 0, & t < t_0 \end{cases} $$
+- Es una entrada que vería en el tiempo de forma lineal 
+
+$$x(t) = \begin{cases} At, & t > t_0 \\ 0, & t < t_0 \end{cases}$$
+
+![image](https://github.com/user-attachments/assets/463b5f83-1f98-41b7-b440-1f606f3cdd1a)
 
 Transformada:
 
-$$ \mathcal{L}\{x(t)\} = \frac{A}{s^2} $$
+$$\mathcal{L}\{x(t)\} = \frac{A}{s^2}$$
 
 ### 3. Entrada parábola:
+> Es una entrada que considera una variación no lineal en el tiempo lo cual permite evaluar diferentes condiciones de inicio y final.
 
-$$ r(t) = \begin{cases} At^2, & t > t_0 \\ 0, & t < t_0 \end{cases} $$
+$$r(t) = \begin{cases} At^2, & t > t_0 \\ 0, & t < t_0 \end{cases}$$
+
+![image](https://github.com/user-attachments/assets/f7a69b5d-00d8-410f-aae7-99f5ab18af0b)
+
 
 Transformada:
 
-$$ \mathcal{L}\{r(t)\} = \frac{A}{s^3} $$
+$$\mathcal{L}\{r(t)\} = \frac{A}{s^3}$$
 
 ---
+
+## 🧠 Actividad
+
+Dada la ecuación diferencial:
+
+$$\dddot{y} + 5\ddot{y} + 13.5\dot{y} + 3.75y = 7.5\dot{u} + 3.75u$$
+
+---
+
+### 🎯 1. Función de transferencia
+
+$$G(s) = \frac{7.5s + 3.75}{s^3 + 5s^2 + 13.5s + 3.75}$$
+
+---
+
+### 🔘 2. Ceros
+
+$$7.5s + 3.75 = 0 \Rightarrow s = -0.5$$
+
+✅ Cero: \( s = -0.5 \)
+
+---
+
+### ✳️ 3. Polos
+
+$$s^3 + 5s^2 + 13.5s + 3.75 = 0$$
+
+Solución (manualmente y por fórmula cúbica):
+
+- $$s_1 = -0.304 + 1.807j$$  
+- $$s_2 = -0.304 - 1.807j$$  
+- $$s_3 = -4.391$$
+
+✅ Polos: 2 complejos conjugados y 1 real
+
+---
+
+### 📉 4. Valor final
+
+#### A. Escalón unitario \( U(s) = \frac{1}{s} \)
+
+$$Y(s) = \frac{7.5s + 3.75}{s(s^3 + 5s^2 + 13.5s + 3.75)}$$
+
+$$\lim_{s \to 0} sY(s) = \frac{3.75}{3.75} = 1$$
+
+✅ Valor final escalón: **1**
+
+---
+
+#### B. Rampa pendiente 5 $$U(s) = \frac{5}{s^2}$$
+
+$$Y(s) = \frac{5(7.5s + 3.75)}{s^2(s^3 + 5s^2 + 13.5s + 3.75)}$$
+
+
+$$\lim_{s \to 0} sY(s) = \infty$$
+
+⚠️ Valor final rampa: **Infinito**
+
+---
+
+### 📊 Gráfica de polos y ceros
+
+>![image](https://github.com/user-attachments/assets/d08927bb-60d3-44cd-842c-beadb1a7b986)
+
+---
+
+### ✅ Resumen
+
+| Concepto | Resultado |
+|----------|-----------|
+| Función de transferencia | $$\frac{7.5s + 3.75}{s^3 + 5s^2 + 13.5s + 3.75}$$ |
+| Cero     | $$s = -0.5$$ |
+| Polos    | $$-0.304 \pm 1.807j, -4.391$$ |
+| Valor final (escalón) | 1 |
+| Valor final (rampa)   | $$\infty$$|
 
 ## ✅ Resumen
 
@@ -345,5 +431,7 @@ $$ \mathcal{L}\{r(t)\} = \frac{A}{s^3} $$
 - Se asumen condiciones iniciales igual a cero.
 - Polos y ceros se obtienen igualando los polinomios a cero.
 
+# Ejercicios adicionales 
+## Ejercicio 1 
 
 
