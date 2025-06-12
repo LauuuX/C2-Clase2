@@ -285,3 +285,124 @@ $$V_o = \frac{x}{x_\text{máx}} \cdot V_{cc}$$
 - Interfaz de usuario (como perillas)
 - Robótica, mecatrónica y sistemas de retroalimentación
 
+## 🌀 Tacómetro
+
+> ![image](https://github.com/user-attachments/assets/676d1f0a-36e8-4e6a-b733-968975443975)
+
+> 🔑 Los **tacómetros** son sensores utilizados para **medir la velocidad angular** de un eje y convertirla en una señal de **voltaje proporcional**. Son muy utilizados en sistemas de control de motores para obtener retroalimentación de velocidad.
+
+---
+
+### 🔧 Relación:
+
+En el dominio del tiempo:
+
+$$v(t) = k \cdot \frac{d\theta(t)}{dt}$$
+
+Donde:
+- $$v(t)$$: voltaje de salida del tacómetro
+- $$\theta(t)$$: posición angular
+- $$k$$: constante del tacómetro
+
+---
+
+### ⚙️ Función de transferencia:
+
+En el dominio de Laplace:
+
+$$G(s) = \frac{V(s)}{\Theta(s)} = ks$$
+
+---
+
+### 📦 Diagrama de bloques típicp
+![image](https://github.com/user-attachments/assets/f274cc42-b751-440a-9b08-952b0c62f877)
+
+- El tacómetro actúa como un bloque con ganancia $$k$$
+- Se ubica después del sistema mecánico (eje o motor)
+- Su salida se usa como señal de realimentación en sistemas de control
+
+---
+
+## Sensores Transmisores
+
+> 🔑 Los sensores transmisores son dispositivos que convierten una **variable del proceso** $$PV(s)$$ en una **salida transmisible** $$TO(s)$$, usualmente en forma de voltaje, corriente o señal digital.
+
+---
+
+### ✅ Si son lineales:
+
+La relación entre la señal de salida y la de entrada es directamente proporcional:
+
+$$H(s) = \frac{TO(s)}{PV(s)} = K$$
+
+Donde:
+- $$K$$: ganancia del sensor transmisor
+
+---
+
+### ❌ Si no son lineales:
+
+En este caso el sistema tiene una dinámica propia (como un retardo o un filtro de primer orden):
+
+$$H(s) = \frac{TO(s)}{PV(s)} = \frac{K_T}{\tau_T s + 1}$$
+
+Donde:
+- $$K_T$$: ganancia del transmisor
+- $$\tau_T$$: constante de tiempo del sensor transmisor
+
+---
+
+### 📦 Diagrama 
+
+> ![image](https://github.com/user-attachments/assets/19a584f7-29ef-4342-8537-326103c33c08)
+
+La variable del proceso $$PV(s)$$ entra al transmisor $$H(s)$$, que la convierte en una salida $$TO(s)$$ utilizable por el sistema de control:
+
+## Modelos de otros procesos 
+### 🧪 Mezcla de Sustancias
+
+> ![image](https://github.com/user-attachments/assets/0e9f2f07-b37d-4f48-9a0e-fb1682749755)
+
+En un sistema de mezcla continua, donde entra una sustancia a cierta concentración y velocidad y sale a igual velocidad con agitación, la función de transferencia es:
+
+$$G(s) = \frac{Q(s)}{Q_i(s)} = \frac{\rho_{inicial} \cdot s + \rho_{in} \cdot v_{in}}{s + v_{out}}$$
+---
+
+## 📘 Ejemplo
+
+- Se tiene un tanque con 8 litros de agua salada (2 kg de sal).
+- Ingresa una salmuera (agua salada) con 3 kg de sal/litro a 4 l/min.
+- La mezcla se agita y sale a 4 l/min.
+
+La función de transferencia:
+
+$$G(s) = \frac{Q(s)}{Q_i(s)} = \frac{2s + 3 \cdot 4}{s + 4}$$
+
+Es decir:
+
+$$G(s) = \frac{2s + 12}{s + 4}$$
+
+## 🌡️ Sistema Térmico
+
+El sistema térmico modela el comportamiento de un horno eléctrico que recibe una entrada de calor $$q_{in}$$ a través de un elemento calefactor. La salida del sistema es la temperatura interna del horno $$T_h$$, afectada por la transferencia de calor al ambiente $$T_A$$.
+
+![image](https://github.com/user-attachments/assets/f67ed461-236b-430a-ab5f-63aeeeba7c92)
+
+La función de transferencia que modela este sistema es:
+
+$$G(s) = \frac{T(s)}{Q_{in}(s)} = \frac{1/C}{s + 1/RC}$$
+
+---
+
+## 🧪 Ejemplo de aplicación
+
+En este sistema se introduce una señal de error $$e$$ que es amplificada, convertida en corriente a través de un solenoide y utilizada para controlar una válvula de vapor que regula la entrada de calor al horno. El proceso incluye retroalimentación con un termopar que mide la temperatura final.
+
+![image](https://github.com/user-attachments/assets/83e5e9b2-0ffd-47f5-b80b-64b3982ac251)
+
+En el diagrama de bloques, cada etapa está representada por una función de transferencia: desde la amplificación, el sistema electromecánico (solenoide), la válvula, hasta el modelo térmico del horno. La salida es la temperatura $$y$$, y se retroalimenta al amplificador para control automático.
+
+![image](https://github.com/user-attachments/assets/a2aa1f77-ffd8-4cbc-98a9-67a2e4bdc49e)
+
+
+
