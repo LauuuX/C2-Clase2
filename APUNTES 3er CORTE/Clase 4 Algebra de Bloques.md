@@ -81,12 +81,33 @@ $$
 
 
 ##  Bloques en Cascada
->🔗 Los bloques en cascada representan una **conexión en serie** entre varios sistemas, donde la salida de un bloque es la entrada del siguiente.
+> Los bloques en cascada representan una **conexión en serie** entre varios sistemas, donde la salida de un bloque es la entrada del siguiente.
 
 💡 Definición:
 - Si dos bloques están conectados en cascada, sus funciones de transferencia se **multiplican**:
 
 ### Sistema en cascada:
+Se tienen 2 sistemas interconectados:
+
+![image](imagenes2/j.png)
+
+$$ Y_{1}(s)= U_{1}(s)G_{1}(s) $$
+$$ Y_{2}(s)= U_{2}(s)G_{2}(s) $$
+
+$$ Y_{2}(s)= Y_{1}(s)G_{2}(s) $$
+$$ Y_{2}(s)= U_{1}(s)G_{1}(s)G_{2}(s) $$
+
+![image](imagenes2/k.png)
+
+###Ejemplo
+Identificar los elementos de sistema de la figura.
+
+![image](imagenes2/l.png)
+
+
+
+
+
 
 
 
