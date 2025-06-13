@@ -193,6 +193,21 @@ $$ \frac{C(s)}{R(s)} = H_{1} + \frac{G}{1-G*H_{2}} $$
 
 
 
+## Resumen General
+
+El álgebra de bloques es una herramienta fundamental en el análisis de sistemas de control, que permite representar gráficamente las relaciones entre los distintos componentes de un sistema mediante diagramas de bloques en el dominio de Laplace.
+
+Cada bloque representa una función de transferencia que transforma la señal de entrada en una señal de salida. Los elementos básicos de un diagrama de bloques incluyen bloques funcionales, flechas direccionales, puntos de suma y ramificaciones.
+
+Las conexiones más comunes son en **cascada** (serie), en **paralelo** y mediante **lazos de realimentación**. En particular, los lazos de realimentación pueden ser **positivos** o **negativos**, siendo estos últimos los más usados para garantizar la estabilidad del sistema.
+
+A través del álgebra de bloques, se pueden obtener funciones de transferencia equivalentes para sistemas complejos, permitiendo así su análisis y diseño de manera más sencilla y modular.
+
+
+
+
+
+
 
 
 
