@@ -22,25 +22,73 @@ $$
 - Representa una operación matemática que transforma una entrada en una salida.
 - Se asocia a una **función de transferencia** en el dominio de Laplace.
   
-$$
-Y(s) = G(s) \cdot U(s)
-$$
+  ![image](imagenes2/g.png)
+  
+$$ Y(s) = G(s) \cdot U(s) $$
 
 ### 2. Flechas:
 - Indican la dirección del flujo de la señal dentro del sistema.
 - Muestran explícitamente la propiedad **unidireccional** de las señales.
 - La punta que entra al bloque es la **entrada**, la que sale es la **salida**.
+- 
+![image](imagenes2/f.png)
 
 ### 3. Punto de suma:
 - Permite **sumar o restar señales**.
 - Se utiliza un signo “+” o “−” para indicar la operación correspondiente.
 - Las señales deben tener **las mismas unidades y dimensiones** para combinarse.
 
+![image](imagenes2/e.png)
+
 ### 4. Punto de ramificación:
 - Divide una señal para enviarla de forma **concurrente** a múltiples bloques o puntos de suma.
 - No altera el valor de la señal, solo la duplica para ser usada en distintos caminos.
 
->📌 Estos elementos permiten estructurar sistemas complejos de forma modular y facilitar su análisis.
+> Estos elementos permiten estructurar sistemas complejos de forma modular y facilitar su análisis.
+
+![image](imagenes2/h.png)
+
+
+
+##  Interpretación del Diagrama de Bloques
+> La interpretación matemática de un diagrama de bloques permite entender cómo las señales se transforman y propagan a través del sistema. Cada bloque representa una función de transferencia que opera sobre la señal de entrada para generar una salida.
+
+💡 Principio fundamental:
+- En el **dominio de Laplace**, cada bloque realiza una **multiplicación** de su entrada por una función de transferencia \( G(s) \):
+
+![image](imagenes2/i.png)
+
+$$
+Y(s) = G(s) \cdot U(s)
+$$
+
+- Donde:
+  - \( U(s) \): entrada del bloque
+  - \( G(s) \): función de transferencia del sistema o subsistema
+  - \( Y(s) \): salida del bloque
+
+ Este principio se aplica **a cada bloque del sistema**, permitiendo el análisis por partes y facilitando la reducción de sistemas complejos.
+
+📌 El análisis por bloques es modular: se puede estudiar cada componente por separado y luego reconstruir el comportamiento total del sistema mediante operaciones como:
+
+- **Multiplicación en cascada**
+- **Suma algebraica en paralelo**
+- **Realimentación positiva o negativa**
+
+ Esta representación permite simplificar el análisis de sistemas complejos sin tener que resolver directamente ecuaciones diferenciales.
+
+
+
+
+##  Bloques en Cascada
+>🔗 Los bloques en cascada representan una **conexión en serie** entre varios sistemas, donde la salida de un bloque es la entrada del siguiente.
+
+💡 Definición:
+- Si dos bloques están conectados en cascada, sus funciones de transferencia se **multiplican**:
+
+### Sistema en cascada:
+
+
 
 
 
