@@ -99,11 +99,96 @@ $$ Y_{2}(s)= U_{1}(s)G_{1}(s)G_{2}(s) $$
 
 ![image](imagenes2/k.png)
 
-###Ejemplo
+### Ejemplo
 Identificar los elementos de sistema de la figura.
 
 ![image](imagenes2/l.png)
 
+## Algebra de bloques
+Utilizando algebra de bloques es posible obtener la funcion de transerencia de sistemas compuestos de varios bloques funcionales.
+
+![image](imagenes2/ñ.png)
+
+
+
+##  Lazo de Realimentación Positiva
+> Un lazo de **realimentación positiva** ocurre cuando la salida del sistema se **suma** a la entrada. Este tipo de configuración tiende a **amplificar** la señal y puede llevar a inestabilidad si no se controla adecuadamente.
+
+💡 Descripción general:
+- La señal de salida \( Y(s) \) se retroalimenta y **se suma** a la entrada \( X(s) \) a través de un bloque de realimentación \( G_2(s) \).
+- El bloque directo tiene una función de transferencia \( G_1(s) \).
+
+###  Estructura del sistema:
+
+![image](imagenes2/m.png)
+
+$$
+E(s) = X(s) + Y_1(s)
+$$
+
+$$
+Y(s) = G_1(s) \cdot E(s)
+$$
+
+$$
+Y_1(s) = G_2(s) \cdot Y(s)
+$$
+
+$$
+E(s) = X(s) + G_2(s) \cdot Y(s)
+$$
+
+$$
+Y(s) = G_1(s) \cdot [X(s) + G_2(s) \cdot Y(s)]
+$$
+
+$$
+Y(s) = G_1(s) \cdot X(s) + G_1(s) \cdot G_2(s) \cdot Y(s)
+$$
+
+$$
+Y(s) \cdot [1 - G_1(s) G_2(s)] = G_1(s) \cdot X(s)
+$$
+
+$$
+\frac{Y(s)}{X(s)} = \frac{G_1(s)}{1 - G_1(s) G_2(s)}
+$$
+
+
+### Lazo de realimentacion negativo
+
+![image](imagenes2/o.png)
+
+## Aplicación algebra de bloques
+Hallar la función de transferencia 
+
+$$ \frac{Y(s)}{X_{1}(s)}  \\:\\: y \\  \frac{Y(s)}{X_{2}(s)} $$
+
+![image](imagenes2/p.png)
+
+![image](imagenes2/q.png)
+
+![image](imagenes2/r.png)
+
+La ecuación queda de la siguiente manera:
+
+$$ \frac{Y(s)}{X_{1}(s)} =G_{3}(G_{1}-G_{2}) $$
+
+$$\frac{Y(s)}{X_{2}(s)} = (G_{4}-1)$$
+
+
+
+
+### Ejemplo:
+Hallar la función de transferencia:
+
+$$ \frac{C(s)}{R(s)} $$
+
+![image](imagenes2/s.png)
+
+![image](imagenes2/t.png)
+
+$$ \frac{C(s)}{R(s)} = H_{1} + \frac{G}{1-G*H_{2}} $$
 
 
 
