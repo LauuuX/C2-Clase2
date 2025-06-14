@@ -165,3 +165,81 @@ $$\frac{E_0(s)}{E_1(s)} = \frac{P_1 \cdot \Delta_1}{\Delta}$$
 
 $$\frac{E_{R1} G_1 I_1 E_{C1} E_{R2} G_3 I_2 G_4}{1 + E_{C1} G_2 + G_3 I_2 + E_{R1} G_1 I_1 E_{C1}}$$
 
+## Actividad 
+
+![image](https://github.com/user-attachments/assets/be2ab9da-5528-4ad4-839d-bcedd1952c03)
+
+### Trayectorias directas
+
+Se identifica 3 trayectorias directas desde $$R(s)$$ hasta $$Y(s)$$:
+
+- **$$P_1$$**: Camino superior
+
+  $$P_1 = 1 \cdot \frac{1}{s+5} \cdot \frac{1}{s^2+8} \cdot \frac{2}{s+7} \cdot \frac{s}{s+9} \cdot 1 = \frac{2s}{(s+5)(s^2+8)(s+7)(s+9)}$$
+
+- **$$P_2$$**: Camino inferior
+
+  $$P_2 = 1 \cdot \frac{1}{s+2} \cdot \frac{0.5}{s+6} \cdot 25 \cdot \frac{1}{s^2+s} \cdot \frac{1}{s} = \frac{12.5}{(s+2)(s+6)(s^2+s)s}$$
+
+- **$$P_3$$**: Ruta intermedia cruzada entre la parte inferior y superior (por simetría, se evalúa con Mason si tiene contribución.
+
+---
+
+### Lazos cerrados
+
+Identificamos 5 lazos cerrados:
+
+- **$$L_1$$**: Auto-lazo en nodo 1:
+  $$L_1 = -10$$
+
+- **$$L_2$$**: Auto-lazo en nodo 4:
+  $$L_2 = -3$$
+
+- **$$L_3$$**: Rama inferior de nodo 2 a 6:
+  $$L_3 = -12$$
+
+- **$$L_4$$**: Rama inferior desde nodo 3 a 6:
+  $$L_4 = -4$$
+
+- **$$L_5$$**: Desde nodo 2 a 5, pasando por 3 y 4:
+  $$L_5 = 25 \cdot \frac{1}{s^2 + s} \cdot \frac{1}{s} \cdot (-4) = -\frac{100}{s(s^2+s)}$$
+
+---
+
+### Determinante total $$\Delta$$
+
+No hay lazos que no se toquen entre sí, entonces:
+
+$$\Delta = 1 - (L_1 + L_2 + L_3 + L_4 + L_5)$$
+
+Sustituyendo:
+
+$$\Delta = 1 - (-10 - 3 -12 -4 - \frac{100}{s(s^2+s)}) = 1 + 29 + \frac{100}{s(s^2+s)}$$
+
+---
+
+### Cofactores $$\Delta_k$$
+
+- **$$\Delta_1$$**: Lazos que no tocan $$P_1$$ → ninguno →
+  $$\Delta_1 = 1$$
+
+- **$$\Delta_2$$**: Lazos que no tocan $$P_2$$ → ninguno →
+  $$\Delta_2 = 1$$
+
+---
+
+### Fórmula de Mason
+
+$$\frac{Y(s)}{R(s)} = \frac{1}{\Delta} \left( P_1 \Delta_1 + P_2 \Delta_2 \right)$$
+
+Sustituyendo:
+
+$$\frac{Y(s)}{R(s)} = \frac{1}{1 + 29 + \frac{100}{s(s^2+s)}} \left( \frac{2s}{(s+5)(s^2+8)(s+7)(s+9)} + \frac{12.5}{(s+2)(s+6)(s^2+s)s} \right)$$
+
+---
+
+### ✅ Resultado final (simplificado)
+
+$$\frac{Y(s)}{R(s)} = \frac{ \frac{2s}{(s+5)(s^2+8)(s+7)(s+9)} + \frac{12.5}{(s+2)(s+6)(s^2+s)s} }{30 + \frac{100}{s(s^2+s)}}$$
+
+Este resultado representa la **función de transferencia** del sistema representado en el diagrama de flujo original.
