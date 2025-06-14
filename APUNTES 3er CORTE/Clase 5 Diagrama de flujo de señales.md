@@ -60,3 +60,31 @@ $$\Delta = 1 - \sum (\text{lazos individuales}) + \sum (\text{pares de lazos que
 $$\Delta_k = 1 - \sum (\text{lazos que no toquen } P_k) + \sum (\text{pares de lazos que no se toquen entre sí ni toquen } P_k) - \cdots$$
 
 Esta fórmula es especialmente útil en sistemas complejos donde los métodos tradicionales serían muy largos.
+
+## ✏️ Ejemplo 1
+
+![image](https://github.com/user-attachments/assets/39279c17-02f4-4ebe-ad87-a44861a5ba94)
+
+**Trayectoria directa:**
+
+$$P_1 = 1 \cdot 1 \cdot G_1 \cdot G_2 \cdot G_3 \cdot 1 = G_1 G_2 G_3$$
+
+**Lazos cerrados:**
+
+$$L_1 = G_1 G_2 H_1$$
+
+$$L_2 = -G_2 G_3 H_2$$
+
+$$L_3 = -G_1 G_2 G_3$$
+
+**Determinante del sistema:**
+
+$$\Delta = 1 - (L_1 + L_2 + L_3)$$
+
+**Cofactor asociado al camino directo:**
+
+$$\Delta_1 = 1$$
+
+**Función de transferencia total:**
+
+$$\frac{C(s)}{R(s)} = \frac{P_1 \Delta_1}{\Delta} = \frac{G_1 G_2 G_3}{1 - G_1 G_2 H_1 + G_2 G_3 H_2 + G_1 G_2 G_3}$$
