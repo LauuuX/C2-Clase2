@@ -88,3 +88,48 @@ $$\Delta_1 = 1$$
 **Función de transferencia total:**
 
 $$\frac{C(s)}{R(s)} = \frac{P_1 \Delta_1}{\Delta} = \frac{G_1 G_2 G_3}{1 - G_1 G_2 H_1 + G_2 G_3 H_2 + G_1 G_2 G_3}$$
+
+## 🔁 Ejemplo 2
+
+![image](https://github.com/user-attachments/assets/170e56e8-eb1f-4168-ba71-c81d0c1770c7)
+
+**Ganancias de trayectoria directa:**
+
+$$P_1 = G_1 G_2 G_3 G_4 G_5$$
+
+$$P_2 = G_1 G_6 G_4 G_5$$
+
+$$P_3 = G_1 G_2 G_7$$
+
+**Ganancias de lazo:**
+
+$$L_1 = -G_4 H_1$$
+
+$$L_2 = -G_2 G_7 H_2$$
+
+$$L_3 = -G_6 G_4 G_5 H_2$$
+
+$$L_4 = -G_2 G_3 G_4 G_5 H_2$$
+
+**Determinante:**
+
+$$\Delta = 1 - (L_1 + L_2 + L_3 + L_4) + L_1 L_2$$
+
+**Cofactores:**
+
+$$
+\Delta_1 = 1 \\
+\Delta_2 = 1 \\
+\Delta_3 = 1 - L_1
+$$
+
+> Nota: $$L_1$$ no toca la trayectoria  $$P_3$$
+
+**Función de transferencia total:**
+
+$$\frac{C(s)}{R(s)} = \frac{1}{\Delta} \left( P_1 \Delta_1 + P_2 \Delta_2 + P_3 \Delta_3 \right)$$
+
+**Expresión final desarrollada:**
+
+$$\frac{G_1 G_2 G_3 G_4 G_5 + G_1 G_6 G_4 G_5 + G_1 G_2 G_7 (1 + G_4 H_1)}{1 + G_4 H_1 + G_2 G_7 H_2 + G_6 G_4 G_5 H_2 + G_2 G_3 G_4 G_5 H_2 + G_4 H_1 G_2 G_7 H_2}$$
+
