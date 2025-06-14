@@ -359,3 +359,44 @@ Simplificando, obtenemos:
 
 $$M(s) = \frac{36s^2 + 135s + 40}{6s^2 + 26s + 8}$$
 
+## ✅ Ejercicio 3
+
+Calcular la función de transferencia $$ \frac{Y(s)}{R(s)} $$ del siguiente flujograma:
+
+![image](https://github.com/user-attachments/assets/86e9d2ea-414d-4954-95d5-fe5b0259cbb4)
+
+### Trayectorias Directas:
+
+- $$P_1 = G_1 G_2 G_3 G_4$$
+- $$P_2 = G_5 G_6 G_7 G_8$$
+
+### Lazos Independientes:
+
+- $$L_1 = G_2 H_1$$
+- $$L_2 = G_3 H_2$$
+- $$L_3 = G_6 H_3$$
+- $$L_4 = G_7 H_4$$
+
+### Pares de lazos:
+
+- $$L_1 L_4 = G_2 H_1 G_7 H_4$$
+- $$L_2 L_3 = G_3 H_2 G_6 H_3$$
+
+### Determinante:
+
+$$\Delta = 1 - (G_2 H_1 + G_3 H_2 + G_6 H_3 + G_7 H_4) + (G_2 H_1 G_7 H_4 + G_3 H_2 G_6 H_3)$$
+
+### Cofactores:
+
+- $$\Delta_1 = 1 - (G_6 H_3 + G_7 H_4)$$
+- $$\Delta_2 = 1 - (G_2 H_1 + G_3 H_2)$$
+
+### Resultado final:
+
+Fórmula general:
+
+$$M(s) = \frac{1}{\Delta} \sum_k P_k \Delta_k$$
+
+Desarrollado:
+
+$$M(s) = \frac{(G_1 G_2 G_3 G_4)(1 - (G_6 H_3 + G_7 H_4)) + (G_5 G_6 G_7 G_8)(1 - (G_2 H_1 + G_3 H_2))}{1 - (G_2 H_1 + G_3 H_2 + G_6 H_3 + G_7 H_4) + (G_2 H_1 G_7 H_4 + G_3 H_2 G_6 H_3)}$$
