@@ -243,3 +243,119 @@ $$\frac{Y(s)}{R(s)} = \frac{1}{1 + 29 + \frac{100}{s(s^2+s)}} \left( \frac{2s}{(
 $$\frac{Y(s)}{R(s)} = \frac{ \frac{2s}{(s+5)(s^2+8)(s+7)(s+9)} + \frac{12.5}{(s+2)(s+6)(s^2+s)s} }{30 + \frac{100}{s(s^2+s)}}$$
 
 Este resultado representa la **función de transferencia** del sistema representado en el diagrama de flujo original.
+
+# Ejercicios adicionales 
+---
+
+## ✅ Ejercicio 1
+Función de transferencia por fórmula de Mason
+
+![image](https://github.com/user-attachments/assets/d932bcd2-1cae-454c-94b9-454da60bbe0d)
+
+---
+
+### ✨ Trayectoria directa
+
+Existe una única trayectoria desde $$R$$ hasta $$C$$:
+
+- $$T_1 = G_3 \cdot G_8 \cdot G_2 \cdot G_5 \cdot G_1$$
+
+---
+
+### 🔁 Lazos cerrados
+
+Se identifican los siguientes lazos:
+
+- $$\lambda_1 = -G_3 \cdot G_8 \cdot G_2 \cdot G_5 \cdot G_1$$
+- $$\lambda_2 = -G_8 \cdot G_7 \cdot G_6$
+- $$\lambda_3 = -G_8 \cdot G_2 \cdot G_5 \cdot G_4 \cdot G_6$$
+
+La suma de los lazos es:
+
+$$\sum \lambda_i = \lambda_1 + \lambda_2 + \lambda_3 = -G_3 G_8 G_2 G_5 G_1 - G_8 G_7 G_6 - G_8 G_2 G_5 G_4 G_6$$
+
+---
+
+### 🧮 Determinante $$\Delta$$
+
+Como no existen lazos disjuntos:
+
+$$\Delta = 1 - \sum \lambda_i = 1 + G_3 G_8 G_2 G_5 G_1 + G_8 G_7 G_6 + G_8 G_2 G_5 G_4 G_6$$
+
+---
+
+### 🧩 Cofactores
+
+- $$\Delta_1 = 1$$ porque no hay lazos que no toquen la trayectoria directa.
+
+---
+
+### 🧠 Aplicando fórmula de Mason
+
+$$\frac{C(s)}{R(s)} = \frac{T_1 \cdot \Delta_1}{\Delta}$$
+
+$$\frac{C(s)}{R(s)} = \frac{G_3 G_8 G_2 G_5 G_1}{1 + G_3 G_8 G_2 G_5 G_1 + G_8 G_7 G_6 + G_8 G_2 G_5 G_4 G_6}$$
+
+
+## ✅ Ejercicio 2
+
+Calcular la función de transferencia $$ \frac{Y(s)}{R(s)} $$ del siguiente flujograma:
+
+![image](https://github.com/user-attachments/assets/816a4da4-4c00-4c94-8935-8d143775d3b4)
+
+
+---
+
+## 🔁 Trayectorias Directas
+
+- $$P_1 = \frac{3s}{(s+1)(s+2)}$$
+- $$P_2 = \frac{-4}{(s+1)}$$
+- $$P_3 = 6$$
+
+---
+
+## 🔁 Lazos Independientes
+
+- $$L_1 = \frac{-3}{s+1}$$
+- $$L_2 = \frac{-5s}{s+2}$$
+
+### Producto de lazos independientes:
+
+- $$L_1 L_2 = \frac{15s}{(s+1)(s+2)}$$
+
+---
+
+## 🧮 Determinante
+
+La fórmula del determinante es:
+
+$$\Delta = 1 - \sum L_a + \sum L_b L_c - \sum L_d L_e L_f + \dots$$
+
+Aplicamos:
+
+$$\Delta = 1 - \left( \frac{-3}{s+1} + \frac{-5s}{s+2} \right) + \frac{15s}{(s+1)(s+2)}$$
+
+---
+
+## 🧩 Cofactores
+
+- $$\Delta_1 = 1$$  
+- $$\Delta_2 = 1 + \frac{5s}{s+2}$$  
+- $$\Delta_3 = \Delta$$  
+
+---
+
+## 🎯 Función de Transferencia Final
+
+Usamos la fórmula de Mason:
+
+$$M(s) = \frac{1}{\Delta} \sum_k P_k \Delta_k$$
+
+Sustituimos:
+
+$$M(s) = \frac{\left( \frac{3s}{(s+1)(s+2)} \right)(1) + \left( \frac{-4}{s+1} \right)\left(1 + \frac{5s}{s+2} \right) + 6\left(1 + \frac{3}{s+1} + \frac{5s}{s+2} + \frac{15s}{(s+1)(s+2)} \right)}{1 - \left( \frac{-3}{s+1} + \frac{-5s}{s+2} \right) + \frac{15s}{(s+1)(s+2)}}$$
+
+Simplificando, obtenemos:
+
+$$M(s) = \frac{36s^2 + 135s + 40}{6s^2 + 26s + 8}$$
+
