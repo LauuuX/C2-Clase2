@@ -431,7 +431,120 @@ $$\lim_{s \to 0} sY(s) = \infty$$
 - Se asumen condiciones iniciales igual a cero.
 - Polos y ceros se obtienen igualando los polinomios a cero.
 
+
 # Ejercicios adicionales 
 ## Ejercicio 1 
+
+# 🎯 Ejercicios Desarrollados: Funciones de Transferencia
+
+A continuación, se desarrollan dos ejercicios clásicos sobre funciones de transferencia, identificando polos, ceros y su comportamiento dinámico. También se incluye la gráfica representativa de la respuesta al escalón.
+
+---
+
+## ✅ Ejercicio 1: Sistema de primer orden
+
+###  Enunciado:
+Hallar la respuesta al escalón unitario del sistema cuya función de transferencia es:
+
+$$
+G(s) = \frac{5}{s + 2}
+$$
+
+###  Desarrollo:
+
+1. **Polos**:  
+   El denominador se anula cuando \( s + 2 = 0 \), por lo tanto:  
+   $$ s = -2 $$
+
+2. **Ceros**:  
+   No hay ceros, ya que el numerador es constante.
+
+3. **Tipo de sistema**:  
+   Sistema de primer orden, **estable**, con un polo en el semiplano izquierdo.
+
+4. **Respuesta al escalón unitario**:
+
+Multiplicamos por la transformada del escalón unitario:
+
+$$
+Y(s) = G(s) \cdot \frac{1}{s} = \frac{5}{s(s + 2)}
+$$
+
+Aplicamos fracciones parciales:
+
+$$
+\frac{5}{s(s+2)} = \frac{A}{s} + \frac{B}{s+2}
+$$
+
+Resolviendo:
+
+$$
+A = \frac{5}{2}, \quad B = -\frac{5}{2}
+$$
+
+Entonces:
+
+$$
+Y(s) = \frac{5}{2} \cdot \frac{1}{s} - \frac{5}{2} \cdot \frac{1}{s+2}
+$$
+
+Transformada inversa de Laplace:
+
+$$
+y(t) = \frac{5}{2} \left( 1 - e^{-2t} \right)
+$$
+
+
+
+## ✅ Ejercicio 2: Sistema de segundo orden con cero
+
+###  Enunciado:
+Analizar el comportamiento del sistema cuya función de transferencia es:
+
+$$
+G(s) = \frac{s + 1}{s^2 + 4s + 5}
+$$
+
+###  Desarrollo:
+
+1. **Ceros**:
+
+El numerador se anula cuando:
+
+$$
+s + 1 = 0 \Rightarrow s = -1
+$$
+
+2. **Polos**:
+
+Resolvemos el denominador:
+
+$$
+s^2 + 4s + 5 = 0
+$$
+
+Aplicando la fórmula general:
+
+$$
+s = \frac{-4 \pm \sqrt{4^2 - 4(1)(5)}}{2(1)} = \frac{-4 \pm \sqrt{-4}}{2}
+$$
+
+$$
+s = -2 \pm j
+$$
+
+3. **Tipo de sistema**:  
+   Sistema de segundo orden, **subamortiguado** (polos complejos conjugados con parte real negativa), y **estable**.
+
+4. **Respuesta al escalón unitario**:
+
+Multiplicamos por la transformada del escalón unitario:
+
+$$
+Y(s) = \frac{s + 1}{s(s^2 + 4s + 5)}
+$$
+
+Este resultado puede resolverse por fracciones parciales o por análisis gráfico. La forma de la respuesta dependerá de los polos complejos y del cero.
+
 
 
