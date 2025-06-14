@@ -133,3 +133,35 @@ $$\frac{C(s)}{R(s)} = \frac{1}{\Delta} \left( P_1 \Delta_1 + P_2 \Delta_2 + P_3 
 
 $$\frac{G_1 G_2 G_3 G_4 G_5 + G_1 G_6 G_4 G_5 + G_1 G_2 G_7 (1 + G_4 H_1)}{1 + G_4 H_1 + G_2 G_7 H_2 + G_6 G_4 G_5 H_2 + G_2 G_3 G_4 G_5 H_2 + G_4 H_1 G_2 G_7 H_2}$$
 
+## 🧮 Ejemplo 3
+
+!![image](https://github.com/user-attachments/assets/8419300a-4fcc-4df3-ba10-21b533d2695c)
+
+**Ganancia de trayectoria directa:**
+
+$$P_1 = 1 \cdot E_{R1} \cdot G_1 \cdot I_1 \cdot 1 \cdot E_{C1} \cdot 1 \cdot E_{R2} \cdot G_3 \cdot I_2 \cdot G_4 = E_{R1} G_1 I_1 E_{C1} E_{R2} G_3 I_2 G_4$$
+
+**Ganancias de lazo:**
+
+$$L_1 = -E_{C1} G_2$$
+
+$$L_2 = -G_3 I_2$$
+
+$$L_3 = -E_{R1} G_1 I_1 E_{C1}$$
+
+**Determinante:**
+
+$$\Delta = 1 - (L_1 + L_2 + L_3)$$
+
+**Cofactor:**
+
+$$\Delta_1 = 1 \quad \text{(los lazos tocan la trayectoria)}$$
+
+**Función de transferencia total:**
+
+$$\frac{E_0(s)}{E_1(s)} = \frac{P_1 \cdot \Delta_1}{\Delta}$$
+
+**Expresión final desarrollada:**
+
+$$\frac{E_{R1} G_1 I_1 E_{C1} E_{R2} G_3 I_2 G_4}{1 + E_{C1} G_2 + G_3 I_2 + E_{R1} G_1 I_1 E_{C1}}$$
+
