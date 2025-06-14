@@ -368,7 +368,7 @@ En un sistema de mezcla continua, donde entra una sustancia a cierta concentraci
 $$G(s) = \frac{Q(s)}{Q_i(s)} = \frac{\rho_{inicial} \cdot s + \rho_{in} \cdot v_{in}}{s + v_{out}}$$
 ---
 
-## 📘 Ejemplo
+##  Ejemplo
 
 - Se tiene un tanque con 8 litros de agua salada (2 kg de sal).
 - Ingresa una salmuera (agua salada) con 3 kg de sal/litro a 4 l/min.
@@ -382,7 +382,7 @@ Es decir:
 
 $$G(s) = \frac{2s + 12}{s + 4}$$
 
-## 🌡️ Sistema Térmico
+##  Sistema Térmico
 
 El sistema térmico modela el comportamiento de un horno eléctrico que recibe una entrada de calor $$q_{in}$$ a través de un elemento calefactor. La salida del sistema es la temperatura interna del horno $$T_h$$, afectada por la transferencia de calor al ambiente $$T_A$$.
 
@@ -394,7 +394,7 @@ $$G(s) = \frac{T(s)}{Q_{in}(s)} = \frac{1/C}{s + 1/RC}$$
 
 ---
 
-## 🧪 Ejemplo de aplicación
+##  Ejemplo de aplicación
 
 En este sistema se introduce una señal de error $$e$$ que es amplificada, convertida en corriente a través de un solenoide y utilizada para controlar una válvula de vapor que regula la entrada de calor al horno. El proceso incluye retroalimentación con un termopar que mide la temperatura final.
 
@@ -404,5 +404,185 @@ En el diagrama de bloques, cada etapa está representada por una función de tra
 
 ![image](https://github.com/user-attachments/assets/a2aa1f77-ffd8-4cbc-98a9-67a2e4bdc49e)
 
+## 📚Ejercicio 1 (Propio):
 
+Modelar la función de transferencia del sistema solenoide desde el voltaje de entrada $$V(s)$$ hasta la posición de salida $$X(s)$$.
+
+**Datos:**
+
+- $$R = 4\ \Omega$$, $$L = 0.5\ \text{H}$$  
+- $$K_s = 10\ \text{N/A}$$  
+- $$m = 2\ \text{kg}$$, $$b = 3\ \text{N·s/m}$$, $$k = 50\ \text{N/m}$$  
+
+**Desarrollo:**
+
+1. **Parte eléctrica**  
+   $$I(s) = \frac{V(s)}{Ls + R} = \frac{V(s)}{0.5s + 4}$$
+
+2. **Fuerza del solenoide**  
+   $$F(s) = K_s \cdot I(s) = 10 \cdot \frac{V(s)}{0.5s + 4}$$
+
+3. **Sistema mecánico**  
+$$X(s) = \frac{F(s)}{ms^2 + bs + k} = \frac{10 \cdot \frac{V(s)}{0.5s + 4}}{2s^2 + 3s + 50}$$
+
+4. **Función de transferencia total**
+
+$$ \frac{X(s)}{V(s)} = \frac{10}{(0.5s + 4)(2s^2 + 3s + 50)} $$
+
+
+## 📚Ejercicio 2 (Propio):
+
+Modelar el sistema de control de temperatura de un horno eléctrico con retroalimentación.
+
+**Datos:**
+$$K_A = 5$$  
+$$G_1(s) = \frac{10}{0.5s + 4}$$  
+$$G_2(s) = \frac{1}{5s + 1}$$ (con $$C = 1$$, $$R = 5$$)  
+Realimentación unitaria
+
+**Desarrollo:**
+
+1. **Sistema en lazo directo:**  
+$$G(s) = 5 \cdot \frac{10}{0.5s + 4} \cdot \frac{1}{5s + 1} = \frac{50}{(0.5s + 4)(5s + 1)}$$
+
+2. Expandiendo el denominador.
+
+$$ (0.5s + 4)(5s + 1) = 2.5s^2 + 20.5s + 4 $$
+
+4. **Función de transferencia en lazo cerrado** .
+
+$$G_{cl}(s) = \frac{G(s)}{1 + G(s)} = \frac{50}{2.5s^2 + 20.5s + 54}$$
+
+
+
+
+## 📚Ejercicio 3 (Propio):
+
+Se tiene un tanque bien mezclado con volumen constante. Se analiza la cantidad de sal en función del tiempo.
+
+**Datos:**
+- Volumen inicial: $$V = 8\ \text{L}$$  
+- Sal inicial: $$2\ \text{kg}$$  
+- Flujo de entrada y salida: $$q = 4\ \text{L/min}$$  
+- Concentración de entrada: $$c_{in} = 3\ \text{kg/L}$$
+
+**Modelamiento:**
+
+La concentración de salida es proporcional a la del tanque.
+
+1. Ecuación diferencial:
+
+$$
+\frac{dQ}{dt} = q \cdot c_{in} - q \cdot \frac{Q(t)}{V}
+$$
+
+2. Transformada de Laplace:
+
+$$
+sQ(s) - Q(0) = q \cdot C_{in}(s) - \frac{q}{V} Q(s)
+$$
+
+Con $$Q(0) = 2$$ y $$C_{in}(s) = \frac{3}{s}$$:
+
+$$
+sQ(s) - 2 = \frac{12}{s} - \frac{4}{8} Q(s)
+$$
+
+$$
+sQ(s) + 0.5Q(s) = \frac{12}{s} + 2
+$$
+
+$$
+Q(s)(s + 0.5) = \frac{12}{s} + 2
+$$
+
+$$
+Q(s) = \frac{\frac{12}{s} + 2}{s + 0.5}
+$$
+
+3. Función de transferencia:
+
+Si $$Q_i(s) = C_{in}(s) = \frac{3}{s}$$, entonces:
+
+$$
+G(s) = \frac{Q(s)}{Q_i(s)} = \frac{2s + 12}{s + 0.5}
+$$
+
+---
+
+## 📚Ejercicio 4 (Propio):
+
+Un motor de corriente directa mueve una carga mecánica a través de una reductora. Se modela desde el voltaje de entrada hasta la posición angular.
+
+**Datos:**
+- Parte eléctrica:  
+  $$L = 0.2\ \text{H},\ R = 2\ \Omega$$  
+  $$K_b = 0.5\ \text{V·s/rad}$$  
+- Parte mecánica:  
+  $$J = 0.02\ \text{kg·m}^2,\ B = 0.04\ \text{N·m·s/rad}$$  
+  $$K_t = 0.5\ \text{N·m/A}$$  
+
+**Ecuaciones:**
+
+1. Parte eléctrica:
+
+$$
+V(s) = (Ls + R)I(s) + K_b s \theta(s)
+$$
+
+2. Parte mecánica:
+
+$$
+J s^2 \theta(s) + B s \theta(s) = K_t I(s)
+$$
+
+3. Despeje de $$I(s)$$:
+
+$$
+I(s) = \frac{J s^2 \theta(s) + B s \theta(s)}{K_t}
+$$
+
+4. Sustitución en la ecuación eléctrica:
+
+$$
+V(s) = (Ls + R) \cdot \frac{J s^2 \theta(s) + B s \theta(s)}{K_t} + K_b s \theta(s)
+$$
+
+Agrupando:
+
+$$
+V(s) = \left[ \frac{(Ls + R)(J s^2 + B s)}{K_t} + K_b s \right] \theta(s)
+$$
+
+5. Función de transferencia total:
+
+$$
+\frac{\theta(s)}{V(s)} = \frac{K_t}{(Ls + R)(Js^2 + Bs) + K_b K_t s}
+$$
+
+Sustituyendo valores:
+
+$$
+\frac{\theta(s)}{V(s)} = \frac{0.5}{(0.2s + 2)(0.02s^2 + 0.04s) + 0.25s}
+$$
+
+Desarrollando:
+
+$$
+= (0.2s + 2)(0.02s^2 + 0.04s) + 0.25s
+$$
+
+$$
+= 0.004s^3 + 0.008s^2 + 0.04s^2 + 0.08s + 0.25s
+$$
+
+$$
+= 0.004s^3 + 0.048s^2 + 0.33s
+$$
+
+6. Resultado final:
+
+$$
+\frac{\theta(s)}{V(s)} = \frac{0.5}{0.004s^3 + 0.048s^2 + 0.33s}
+$$
 
