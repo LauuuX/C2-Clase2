@@ -203,13 +203,79 @@ Las conexiones más comunes son en **cascada** (serie), en **paralelo** y median
 
 A través del álgebra de bloques, se pueden obtener funciones de transferencia equivalentes para sistemas complejos, permitiendo así su análisis y diseño de manera más sencilla y modular.
 
+## 📚Ejercicio 1 (Propio):
+
+Desarrollar el siguiente problema, buscando la función de transferencia:
+
+$$ \frac{C(s)}{R(s)} $$
+
+![image](imagenes2/u.png)
+
+Ordenamos de tal manera que nos facilite el desarrollo del diagrama.
+
+![image](imagenes2/v.png)
+
+Ahora realizamos un desplazamiento:
+
+![image](imagenes2/x.png)
+
+Hacemos la multiplicación y suma correspondiente.
+
+![image](imagenes2/y.png)
+
+Ahora realizamos la retroalimentación y producto.
+
+![image](imagenes2/z.png)
+
+Nuevamente realizamos el producto y posterior a esto realizamos la realimentación correspondiente.
+
+![image](imagenes2/aa.png)
+
+Por ultimo realizamos la multiplicacion de los bloques y la realimentación que resulta despues de aplicar el paso anterior.
+
+Diagrama final:
+![image](imagenes2/bb.png)
+
+ECUACION FINAL
+
+$$
+\frac{G_1 \cdot G_2 \cdot G_3 + H_1 \cdot G_3 \cdot G_1}{1 + H_2 \cdot G_2 + G_2 \cdot G_3 \cdot H_3 + H_1 \cdot G_3 \cdot H_3 + G_1 \cdot G_2 \cdot G_3 + H_1 \cdot G_3 \cdot G_1}
+$$
+
+## 📚Ejercicio 2 (Propio):
+
+Desarrollar el siguiente problema, buscando la función de transferencia:
+
+$$ \frac{Y(s)}{X(s)} $$
+
+![image](imagenes2/cc.png)
+
+realizamos el traslado y orden de los bloques.
+
+![image](imagenes2/dd.png)
+
+Ahora realizamos la multiplicación y posterior a esto la realimentación.
+
+![image](imagenes2/ee.png)
+
+realizamos la multiplicaión
+
+![image](imagenes2/ff.png)
+
+Ahora desarrollamos la realimentación negativa
+
+![image](imagenes2/gg.png)
+
+Posterior a esto se realiza la realimentacion con un bloque numero 1.
+
+![image](imagenes2/hh.png)
 
 
+Ecuacion final de tranferencia.
 
-
-
-
-
+$$
+\frac{Y(s)}{X(s)}= \frac{G1 \cdot G2 \cdot G3}{1 - G1 \cdot G2 \cdot H1 + G2 \cdot G3 \cdot H2 + G1 \cdot G2 \cdot G3}
+$$
 
 
 
